@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SBPJ | SupBiotech Projects Journal</title>
+  <meta name="description" content="Official website of SBPJ — SupBiotech Projects Journal, a student-led scientific journal showcasing biotechnology projects, reviews, and research perspectives from SupBiotech." />
+  <style>
+    :root {
+      --navy: #0b1f3a;
+      --blue: #1e5bff;
+      --cyan: #00a6c8;
+      --light: #f5f8fc;
+      --text: #172033;
+      --muted: #64748b;
+      --white: #ffffff;
+      --border: #d9e2ec;
+      --shadow: 0 20px 45px rgba(11, 31, 58, 0.12);
+      --radius: 22px;
+    }
+
+    * {
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--light);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    header {
+      background: radial-gradient(circle at top right, rgba(0, 166, 200, 0.35), transparent 35%),
+                  linear-gradient(135deg, var(--navy), #102f5f 55%, #153f7c);
+      color: var(--white);
+      min-height: 88vh;
+      padding: 28px clamp(20px, 5vw, 72px);
+    }
+
+    nav {
+      max-width: 1180px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 24px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      font-weight: 800;
+      letter-spacing: 0.02em;
+    }
+
+    .logo {
+      width: 48px;
+      height: 48px;
+      border-radius: 14px;
+      background: linear-gradient(135deg, var(--cyan), var(--blue));
+      display: grid;
+      place-items: center;
+      font-weight: 900;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.18);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 22px;
+      font-size: 0.95rem;
+      color: #dce9ff;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
+    .nav-links a:hover {
+      color: var(--white);
+    }
+
+    .hero {
+      max-width: 1180px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 48px;
+      align-items: center;
+      padding: 110px 0 80px;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      padding: 8px 14px;
+      border: 1px solid rgba(255,255,255,0.22);
+      border-radius: 999px;
+      color: #dce9ff;
+      background: rgba(255,255,255,0.08);
+      backdrop-filter: blur(10px);
+      font-size: 0.9rem;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(2.8rem, 8vw, 6.5rem);
+      line-height: 0.92;
+      letter-spacing: -0.06em;
+    }
+
+    .subtitle {
+      margin-top: 28px;
+      font-size: clamp(1.1rem, 2vw, 1.35rem);
+      max-width: 720px;
+      color: #dce9ff;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 16px;
+      margin-top: 36px;
+      flex-wrap: wrap;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 14px 22px;
+      border-radius: 999px;
+      font-weight: 700;
+      transition: 0.2s ease;
+    }
+
+    .button.primary {
+      background: var(--white);
+      color: var(--navy);
+    }
+
+    .button.secondary {
+      border: 1px solid rgba(255,255,255,0.28);
+      color: var(--white);
+    }
+
+    .button:hover {
+      transform: translateY(-2px);
+    }
+
+    .journal-card {
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.18);
+      border-radius: var(--radius);
+      padding: 28px;
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(14px);
+    }
+
+    .journal-card h2 {
+      margin-top: 0;
+      font-size: 1.4rem;
+    }
+
+    .journal-card p {
+      color: #dce9ff;
+    }
+
+    .status {
+      display: grid;
+      gap: 14px;
+      margin-top: 22px;
+    }
+
+    .status div {
+      padding: 14px;
+      border-radius: 16px;
+      background: rgba(255,255,255,0.1);
+    }
+
+    main {
+      max-width: 1180px;
+      margin: -70px auto 90px;
+      padding: 0 clamp(20px, 5vw, 72px);
+    }
+
+    section {
+      margin-bottom: 28px;
+    }
+
+    .panel {
+      background: var(--white);
+      border-radius: var(--radius);
+      padding: clamp(26px, 4vw, 44px);
+      box-shadow: var(--shadow);
+      border: 1px solid rgba(217, 226, 236, 0.8);
+    }
+
+    .section-title {
+      margin: 0 0 14px;
+      font-size: clamp(1.8rem, 4vw, 3rem);
+      line-height: 1.05;
+      letter-spacing: -0.04em;
+      color: var(--navy);
+    }
+
+    .section-lead {
+      margin: 0 0 28px;
+      color: var(--muted);
+      max-width: 760px;
+      font-size: 1.05rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .mini-card {
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 22px;
+      background: #fbfdff;
+    }
+
+    .mini-card h3 {
+      margin-top: 0;
+      color: var(--navy);
+    }
+
+    .mini-card p {
+      color: var(--muted);
+      margin-bottom: 0;
+    }
+
+    .issue {
+      display: grid;
+      grid-template-columns: 140px 1fr auto;
+      gap: 24px;
+      align-items: center;
+      padding: 22px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .issue:last-child {
+      border-bottom: none;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 6px 12px;
+      border-radius: 999px;
+      background: #e8f1ff;
+      color: var(--blue);
+      font-weight: 700;
+      font-size: 0.85rem;
+    }
+
+    .issue h3 {
+      margin: 6px 0;
+      color: var(--navy);
+    }
+
+    .issue p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .callout {
+      background: linear-gradient(135deg, var(--navy), #17468d);
+      color: var(--white);
+      border-radius: var(--radius);
+      padding: clamp(28px, 5vw, 52px);
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 30px;
+      align-items: center;
+      box-shadow: var(--shadow);
+    }
+
+    .callout h2 {
+      margin: 0 0 10px;
+      font-size: clamp(1.8rem, 4vw, 3rem);
+      letter-spacing: -0.04em;
+    }
+
+    .callout p {
+      color: #dce9ff;
+      margin: 0;
+      max-width: 720px;
+    }
+
+    footer {
+      background: var(--navy);
+      color: #dce9ff;
+      padding: 36px clamp(20px, 5vw, 72px);
+    }
+
+    .footer-inner {
+      max-width: 1180px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+
+    @media (max-width: 860px) {
+      nav {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .hero {
+        grid-template-columns: 1fr;
+        padding-top: 70px;
+      }
+
+      .grid {
+        grid-template-columns: 1fr;
+      }
+
+      .issue {
+        grid-template-columns: 1fr;
+      }
+
+      .callout {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav aria-label="Main navigation">
+      <a class="brand" href="#top" aria-label="SBPJ home">
+        <span class="logo">S</span>
+        <span>SBPJ<br /><small>SupBiotech Projects Journal</small></span>
+      </a>
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#scope">Scope</a>
+        <a href="#issues">Issues</a>
+        <a href="#submit">Submit</a>
+        <a href="#board">Editorial Board</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+
+    <div class="hero" id="top">
+      <div>
+        <span class="eyebrow">Official website</span>
+        <h1>SupBiotech Projects Journal</h1>
+        <p class="subtitle">
+          SBPJ is a scientific and educational journal dedicated to showcasing biotechnology projects,
+          student research, reviews, and innovation perspectives developed within the SupBiotech community.
+        </p>
+        <div class="hero-actions">
+          <a class="button primary" href="#submit">Submit a manuscript</a>
+          <a class="button secondary" href="#issues">Browse issues</a>
+        </div>
+      </div>
+
+      <aside class="journal-card" aria-label="Journal information">
+        <h2>Journal information</h2>
+        <p>
+          A platform for rigorous, accessible, and educational scientific communication in biotechnology.
+        </p>
+        <div class="status">
+          <div><strong>Format:</strong><br />Open-access student and project journal</div>
+          <div><strong>Discipline:</strong><br />Biotechnology, health, environment, data science, bioengineering</div>
+          <div><strong>Status:</strong><br />Call for contributions open</div>
+        </div>
+      </aside>
+    </div>
+  </header>
+
+  <main>
+    <section class="panel" id="about">
+      <h2 class="section-title">About SBPJ</h2>
+      <p class="section-lead">
+        The SupBiotech Projects Journal provides a formal space for publishing high-quality project work,
+        scientific syntheses, experimental reports, and perspectives from students, researchers, teachers,
+        and collaborators connected to SupBiotech.
+      </p>
+      <div class="grid">
+        <div class="mini-card">
+          <h3>Scientific training</h3>
+          <p>Helping students learn how to structure, write, review, and communicate scientific work.</p>
+        </div>
+        <div class="mini-card">
+          <h3>Project visibility</h3>
+          <p>Giving biotechnology projects a durable and citable public presence.</p>
+        </div>
+        <div class="mini-card">
+          <h3>Community journal</h3>
+          <p>Connecting students, alumni, faculty, researchers, and industrial partners.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel" id="scope">
+      <h2 class="section-title">Aims and scope</h2>
+      <p class="section-lead">
+        SBPJ welcomes contributions related to biotechnology in its broadest sense, including experimental,
+        computational, industrial, environmental, health-related, and societal dimensions.
+      </p>
+      <div class="grid">
+        <div class="mini-card">
+          <h3>Research articles</h3>
+          <p>Original student or team projects with clear methods, results, and interpretation.</p>
+        </div>
+        <div class="mini-card">
+          <h3>Reviews</h3>
+          <p>Structured syntheses on current topics in biotechnology and life sciences.</p>
+        </div>
+        <div class="mini-card">
+          <h3>Perspectives</h3>
+          <p>Short articles on innovation, ethics, entrepreneurship, policy, or emerging technologies.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel" id="issues">
+      <h2 class="section-title">Issues</h2>
+      <p class="section-lead">Current and upcoming issues of the SupBiotech Projects Journal.</p>
+
+      <article class="issue">
+        <div><span class="badge">Upcoming</span></div>
+        <div>
+          <h3>Volume 1 — Launch Issue</h3>
+          <p>First collection of SupBiotech project articles, reviews, and student perspectives.</p>
+        </div>
+        <a class="button secondary" style="color: var(--navy); border-color: var(--border);" href="#submit">Contribute</a>
+      </article>
+
+      <article class="issue">
+        <div><span class="badge">Planned</span></div>
+        <div>
+          <h3>Special Issue — Biotechnology and Society</h3>
+          <p>Articles exploring ethical, societal, and translational dimensions of biotechnology.</p>
+        </div>
+        <a class="button secondary" style="color: var(--navy); border-color: var(--border);" href="#contact">Learn more</a>
+      </article>
+    </section>
+
+    <section class="panel" id="submit">
+      <h2 class="section-title">Submit to SBPJ</h2>
+      <p class="section-lead">
+        Authors are invited to submit manuscripts prepared in a clear scientific format. Submissions may include
+        project reports, review articles, methodological notes, data-driven analyses, or perspectives.
+      </p>
+      <div class="grid">
+        <div class="mini-card">
+          <h3>1. Prepare</h3>
+          <p>Write your manuscript with title, abstract, introduction, methods, results, discussion, and references.</p>
+        </div>
+        <div class="mini-card">
+          <h3>2. Review</h3>
+          <p>Submissions are reviewed for clarity, scientific structure, originality, and educational value.</p>
+        </div>
+        <div class="mini-card">
+          <h3>3. Publish</h3>
+          <p>Accepted articles are published online as part of an SBPJ issue.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel" id="board">
+      <h2 class="section-title">Editorial board</h2>
+      <p class="section-lead">
+        The editorial board coordinates calls for papers, review procedures, editorial standards, and publication.
+      </p>
+      <div class="grid">
+        <div class="mini-card">
+          <h3>Editor-in-Chief</h3>
+          <p>To be announced</p>
+        </div>
+        <div class="mini-card">
+          <h3>Scientific Editors</h3>
+          <p>To be announced</p>
+        </div>
+        <div class="mini-card">
+          <h3>Student Editorial Team</h3>
+          <p>To be announced</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="callout" id="contact">
+      <div>
+        <h2>Contact the journal</h2>
+        <p>
+          For submissions, editorial questions, partnerships, or participation in the journal team,
+          contact the SBPJ editorial office.
+        </p>
+      </div>
+      <a class="button primary" href="mailto:contact@supbiotech-projects-journal.org">Email SBPJ</a>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div>
+        <strong>SBPJ — SupBiotech Projects Journal</strong><br />
+        Official website of the SupBiotech Projects Journal.
+      </div>
+      <div>
+        © 2026 SBPJ. All rights reserved.
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
