@@ -11,13 +11,13 @@
 -url pdf of journal : https://example.com/volume-2.pdf
 
 *Volume 3
--Date : March 2025
+-Date : Feb 2025
 -url small cover : 
 -url of page with contents of volume : https://example.com/volume-3
 -url pdf of journal : https://example.com/volume-3.pdf
 
 *Volume 4
 -Date : March 2025
--url small cover : 
+-url small cover : https://supbiotech-projects.github.io/SBPJ_vols/Vol1/cover.jpg
 -url of page with contents of volume : https://example.com/volume-3
 -url pdf of journal : https://example.com/volume-3.pdf
