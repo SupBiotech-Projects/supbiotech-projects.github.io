@@ -22,12 +22,6 @@
 -url of page with contents of volume : https://example.com/volume
 -url pdf of journal : https://supbiotech-projects.github.io/SBPJ_vols/Vol4/SBPJVOL4.pdf
 
-*Volume 5
--Date : Date TBA
--url small cover : https://example.com/volume
--url of page with contents of volume : https://example.com/volume
--url pdf of journal : https://example.com/volume
-
 *Volume 6
 -Date : February 2023
 -url small cover : https://supbiotech-projects.github.io/SBPJ_vols/Vol6/cover6-feb23.png
