@@ -1,23 +1,53 @@
 *Volume 1
 -Date : March 2024
--url small cover : https://supbiotech-projects.github.io/SBPJ_vols/Vol1/cover.jpg
--url of page with contents of volume : https://example.com/volume-1
--url pdf of journal : https://example.com/volume-1.pdf
+-url small cover : https://supbiotech-projects.github.io/SBPJ_vols/Vol1/cover1-jan18.png
+-url of page with contents of volume : https://example.com/volume
+-url pdf of journal : https://supbiotech-projects.github.io/SBPJ_vols/Vol1/SBPJVOL1.pdf
 
 *Volume 2
--Date : September 2024
--url small cover : 
--url of page with contents of volume : https://example.com/volume-2
--url pdf of journal : https://example.com/volume-2.pdf
+-Date : November 2018
+-url small cover : https://supbiotech-projects.github.io/SBPJ_vols/Vol2/cover2-nov18.png
+-url of page with contents of volume : https://example.com/volume
+-url pdf of journal : https://supbiotech-projects.github.io/SBPJ_vols/Vol2/SBPJVOL2.pdf
 
 *Volume 3
--Date : Feb 2025
--url small cover : 
--url of page with contents of volume : https://example.com/volume-3
--url pdf of journal : https://example.com/volume-3.pdf
+-Date : January 2019
+-url small cover : https://supbiotech-projects.github.io/SBPJ_vols/Vol3/cover3-jan19.png
+-url of page with contents of volume : https://example.com/volume
+-url pdf of journal : https://supbiotech-projects.github.io/SBPJ_vols/Vol3/SBPJVOL3.pdf
 
 *Volume 4
--Date : March 2025
--url small cover : https://supbiotech-projects.github.io/SBPJ_vols/Vol1/cover.jpg
--url of page with contents of volume : https://example.com/volume-3
--url pdf of journal : https://example.com/volume-3.pdf
+-Date : January 2020
+-url small cover : https://supbiotech-projects.github.io/SBPJ_vols/Vol4/cover4-jan20.png
+-url of page with contents of volume : https://example.com/volume
+-url pdf of journal : https://supbiotech-projects.github.io/SBPJ_vols/Vol4/SBPJVOL4.pdf
+
+*Volume 5
+-Date : Date TBA
+-url small cover : https://example.com/volume
+-url of page with contents of volume : https://example.com/volume
+-url pdf of journal : https://example.com/volume
+
+*Volume 6
+-Date : February 2023
+-url small cover : https://supbiotech-projects.github.io/SBPJ_vols/Vol6/cover6-feb23.png
+-url of page with contents of volume : https://example.com/volume
+-url pdf of journal : https://supbiotech-projects.github.io/SBPJ_vols/Vol6/SBPJVOL6_compressed.pdf
+
+*Volume 7
+-Date : February 2024
+-url small cover : https://supbiotech-projects.github.io/SBPJ_vols/Vol7/cover7-feb24.png
+-url of page with contents of volume : https://example.com/volume
+-url pdf of journal : https://supbiotech-projects.github.io/SBPJ_vols/Vol7/SBPJ_vol7.pdf
+
+*Volume 8
+-Date : February 2025
+-url small cover : https://supbiotech-projects.github.io/SBPJ_vols/Vol8/cover8-feb25.png
+-url of page with contents of volume : https://example.com/volume
+-url pdf of journal : https://supbiotech-projects.github.io/SBPJ_vols/Vol8/SBPJVOL8_compressed.pdf
+
+*Volume 9
+-Date : February 2026
+-url small cover : https://supbiotech-projects.github.io/SBPJ_vols/Vol9/cover9-feb26.png
+-url of page with contents of volume : https://example.com/volume
+-url pdf of journal : https://supbiotech-projects.github.io/SBPJ_vols/Vol9/SBPJVOL9_compressed.pdf
