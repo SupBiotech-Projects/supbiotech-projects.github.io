@@ -1,6 +1,6 @@
 *Volume 1
 -Date : March 2024
--url small cover : 
+-url small cover : https://supbiotech-projects.github.io/SBPJ_vols/Vol1/cover.jpg
 -url of page with contents of volume : https://example.com/volume-1
 -url pdf of journal : https://example.com/volume-1.pdf
 
