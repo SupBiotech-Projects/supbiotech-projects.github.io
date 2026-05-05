@@ -1,0 +1,17 @@
+*Volume 1
+-Date : March 2024
+-url small cover : 
+-url of page with contents of volume : https://example.com/volume-1
+-url pdf of journal : https://example.com/volume-1.pdf
+
+*Volume 2
+-Date : September 2024
+-url small cover : 
+-url of page with contents of volume : https://example.com/volume-2
+-url pdf of journal : https://example.com/volume-2.pdf
+
+*Volume 3
+-Date : March 2025
+-url small cover : 
+-url of page with contents of volume : https://example.com/volume-3
+-url pdf of journal : https://example.com/volume-3.pdf
