@@ -104,7 +104,7 @@ function VolumeCard({ volume, index }: { volume: Volume; index: number }) {
   );
 
   const baseClass =
-    "reveal group block overflow-hidden rounded-2xl border border-border bg-card shadow-card transition-all duration-300 hover:-translate-y-1 hover:shadow-glow";
+    "group block overflow-hidden rounded-2xl border border-border bg-card shadow-card transition-all duration-300 hover:-translate-y-1 hover:shadow-glow";
 
   if (hasContents) {
     return (
