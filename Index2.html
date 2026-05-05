@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SupBiotech Projects Journal</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+–navy: #0d2a4e;
+–blue: #1a4a8a;
+–teal: #00b4c8;
+–purple: #5b3fa6;
+–light: #f0f4f8;
+–white: #ffffff;
+}
+
+body { font-family: ‘Segoe UI’, system-ui, sans-serif; background: var(–light); color: var(–navy); }
+
+/* ── STICKY NAV ── */
+nav {
+position: sticky; top: 0; z-index: 100;
+display: flex; align-items: center; justify-content: space-between;
+padding: 0 24px; height: 64px;
+background: rgba(240,244,248,0.85);
+backdrop-filter: blur(12px);
+border-bottom: 1px solid rgba(0,180,200,0.15);
+box-shadow: 0 2px 16px rgba(13,42,78,0.08);
+}
+.nav-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+.logo-icon {
+width: 38px; height: 38px; border-radius: 10px;
+background: linear-gradient(135deg, #e83e8c, #6f42c1, #007bff);
+display: flex; align-items: center; justify-content: center;
+font-size: 18px;
+}
+.logo-text { font-weight: 700; font-size: 13px; color: var(–navy); line-height: 1.2; }
+.logo-text span { display: block; font-weight: 400; font-size: 11px; color: #666; }
+.nav-links { display: flex; align-items: center; gap: 8px; }
+.nav-links a {
+padding: 7px 14px; border-radius: 20px; font-size: 13px; font-weight: 500;
+text-decoration: none; color: var(–navy); transition: all .2s;
+}
+.nav-links a:hover { background: rgba(0,180,200,0.12); color: var(–teal); }
+.nav-github {
+width: 40px; height: 40px; border-radius: 14px;
+background: var(–white); box-shadow: 0 2px 10px rgba(0,0,0,0.12);
+display: flex; align-items: center; justify-content: center;
+text-decoration: none; color: var(–navy); transition: transform .2s;
+}
+.nav-github:hover { transform: scale(1.08); }
+.nav-github svg { width: 20px; height: 20px; }
+
+/* ── HERO ── */
+.hero {
+background: linear-gradient(160deg, var(–navy) 0%, var(–blue) 55%, var(–purple) 100%);
+padding: 72px 32px 80px;
+position: relative; overflow: hidden;
+}
+.hero::before {
+content: ‘’; position: absolute; inset: 0;
+background: radial-gradient(ellipse 80% 60% at 80% 110%, rgba(0,180,200,0.18), transparent);
+}
+.hero-badge {
+display: inline-block; padding: 6px 16px; border-radius: 20px;
+border: 1.5px solid rgba(255,255,255,0.3); color: rgba(255,255,255,0.85);
+font-size: 11px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase;
+margin-bottom: 28px;
+}
+.hero h1 {
+font-size: clamp(36px, 8vw, 56px); font-weight: 800; line-height: 1.1;
+color: var(–white); margin-bottom: 20px;
+}
+.hero p { font-size: 17px; color: rgba(255,255,255,0.75); max-width: 480px; line-height: 1.6; margin-bottom: 40px; }
+.hero-btns { display: flex; flex-direction: column; gap: 12px; max-width: 340px; }
+.btn-primary {
+display: flex; align-items: center; justify-content: center; gap: 10px;
+padding: 16px 24px; border-radius: 14px;
+background: var(–white); color: var(–navy);
+font-weight: 600; font-size: 15px; text-decoration: none;
+box-shadow: 0 4px 20px rgba(0,0,0,0.2); transition: transform .2s, box-shadow .2s;
+}
+.btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 28px rgba(0,0,0,0.25); }
+.btn-secondary {
+display: flex; align-items: center; justify-content: center; gap: 10px;
+padding: 15px 24px; border-radius: 14px;
+background: rgba(255,255,255,0.1); border: 1.5px solid rgba(255,255,255,0.25);
+color: var(–white); font-weight: 600; font-size: 15px; text-decoration: none;
+transition: background .2s;
+}
+.btn-secondary:hover { background: rgba(255,255,255,0.18); }
+
+/* ── ABOUT ── */
+.about { padding: 72px 32px; background: var(–white); }
+.section-label {
+display: flex; align-items: center; gap: 12px;
+font-size: 11px; font-weight: 700; letter-spacing: 2px;
+color: var(–teal); text-transform: uppercase; margin-bottom: 24px;
+}
+.section-label::before { content: ‘’; width: 40px; height: 2px; background: var(–teal); }
+.about h2 { font-size: clamp(28px, 6vw, 40px); font-weight: 800; line-height: 1.2; margin-bottom: 20px; }
+.about h2 em { font-style: normal; color: var(–teal); }
+.about p { font-size: 15px; color: #555; line-height: 1.7; max-width: 560px; }
+
+/* ── VOLUMES ── */
+.volumes-section { padding: 64px 24px; }
+.volumes-header { display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 32px; flex-wrap: wrap; gap: 12px; }
+.volumes-header h2 { font-size: 28px; font-weight: 800; }
+.volumes-count { font-size: 13px; color: #888; }
+
+#volumes-grid {
+display: grid;
+grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+gap: 24px;
+}
+
+.vol-card {
+background: var(–white); border-radius: 18px;
+box-shadow: 0 4px 20px rgba(13,42,78,0.08);
+overflow: hidden; transition: transform .25s, box-shadow .25s;
+cursor: pointer;
+}
+.vol-card:hover { transform: translateY(-6px); box-shadow: 0 12px 36px rgba(13,42,78,0.16); }
+.vol-cover {
+width: 100%; aspect-ratio: 3/4; object-fit: cover;
+background: linear-gradient(135deg, var(–navy), var(–purple));
+display: block;
+}
+.vol-cover-placeholder {
+width: 100%; aspect-ratio: 3/4;
+background: linear-gradient(135deg, var(–navy) 0%, var(–blue) 60%, var(–purple) 100%);
+display: flex; flex-direction: column; align-items: center; justify-content: center;
+color: white; gap: 8px;
+}
+.vol-cover-placeholder .big-num { font-size: 48px; font-weight: 800; opacity: 0.9; }
+.vol-cover-placeholder .label { font-size: 11px; letter-spacing: 2px; opacity: 0.6; text-transform: uppercase; }
+.vol-info { padding: 16px; }
+.vol-info h3 { font-size: 14px; font-weight: 700; margin-bottom: 4px; }
+.vol-info .vol-date { font-size: 12px; color: #888; margin-bottom: 12px; }
+.vol-links { display: flex; gap: 8px; flex-wrap: wrap; }
+.vol-link {
+padding: 5px 12px; border-radius: 20px; font-size: 11px; font-weight: 600;
+text-decoration: none; transition: all .15s;
+}
+.vol-link.pdf { background: rgba(0,180,200,0.1); color: var(–teal); }
+.vol-link.pdf:hover { background: var(–teal); color: white; }
+.vol-link.content { background: rgba(13,42,78,0.07); color: var(–navy); }
+.vol-link.content:hover { background: var(–navy); color: white; }
+
+/* ── LOADING / ERROR ── */
+.status-msg {
+grid-column: 1/-1; text-align: center; padding: 60px 20px; color: #888; font-size: 15px;
+}
+.status-msg .icon { font-size: 40px; margin-bottom: 12px; }
+.error-msg { color: #c0392b; }
+
+/* ── FOOTER ── */
+footer {
+background: var(–navy); color: rgba(255,255,255,0.5);
+text-align: center; padding: 32px 24px; font-size: 13px; margin-top: 48px;
+}
+footer strong { color: rgba(255,255,255,0.85); }
+
+@media (max-width: 480px) {
+.nav-links { display: none; }
+#volumes-grid { grid-template-columns: repeat(2, 1fr); gap: 16px; }
+}
+</style>
+
+</head>
+<body>
+
+<!-- ── STICKY NAV ── -->
+
+<nav>
+  <a class="nav-logo" href="#">
+    <div class="logo-icon">📖</div>
+    <div class="logo-text">SupBiotech<span>Projects Journal</span></div>
+  </a>
+  <div class="nav-links">
+    <a href="#volumes">Volumes</a>
+    <a href="#about">About</a>
+  </div>
+  <a class="nav-github" href="#" title="GitHub">
+    <svg viewBox="0 0 24 24" fill="currentColor">
+      <path d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.009-.868-.013-1.703-2.782.604-3.369-1.342-3.369-1.342-.454-1.155-1.11-1.463-1.11-1.463-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0112 6.836a9.59 9.59 0 012.504.337c1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.202 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.163 22 16.418 22 12c0-5.523-4.477-10-10-10z"/>
+    </svg>
+  </a>
+</nav>
+
+<!-- ── HERO ── -->
+
+<section class="hero">
+  <div class="hero-badge">Official Site</div>
+  <h1>SupBiotech<br>Projects Journal</h1>
+  <p>The academic journal of SupBiotech undergraduates — showcasing original research for the scientific community.</p>
+  <div class="hero-btns">
+    <a href="#volumes" class="btn-primary">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z"/><path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z"/></svg>
+      Browse volumes
+    </a>
+    <a href="#" class="btn-secondary">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.009-.868-.013-1.703-2.782.604-3.369-1.342-3.369-1.342-.454-1.155-1.11-1.463-1.11-1.463-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0112 6.836a9.59 9.59 0 012.504.337c1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.202 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.163 22 16.418 22 12c0-5.523-4.477-10-10-10z"/></svg>
+      GitHub repositories
+    </a>
+  </div>
+</section>
+
+<!-- ── ABOUT ── -->
+
+<section class="about" id="about">
+  <div class="section-label">About</div>
+  <h2>A journal <em>written by students</em>,<br>for the scientific community.</h2>
+  <p>The SupBiotech Projects Journal is a student-led academic publication showcasing original research, innovation projects, and scientific discoveries from SupBiotech undergraduates.</p>
+</section>
+
+<!-- ── VOLUMES ── -->
+
+<section class="volumes-section" id="volumes">
+  <div class="volumes-header">
+    <div>
+      <div class="section-label">Archive</div>
+      <h2>All volumes</h2>
+    </div>
+    <span class="volumes-count" id="vol-count">Loading…</span>
+  </div>
+  <div id="volumes-grid">
+    <div class="status-msg"><div class="icon">⏳</div>Loading volumes…</div>
+  </div>
+</section>
+
+<!-- ── FOOTER ── -->
+
+<footer>
+  <strong>SupBiotech Projects Journal</strong> — The academic journal of SupBiotech undergraduates
+</footer>
+
+<script>
+// ── Parse SBPJ-contents.txt ──────────────────────────────────────────────────
+// Format expected (blank line between volumes):
+//   Volume 1
+//   Date : 2023
+//   Urlpdf: https://...
+//   Urlcoverpagejpg: https://...
+//   Urlvolcontent: https://...
+
+async function loadVolumes() {
+  const grid = document.getElementById('volumes-grid');
+  const countEl = document.getElementById('vol-count');
+
+  let text;
+  try {
+    const res = await fetch('SBPJ-contents.txt');
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    text = await res.text();
+  } catch (e) {
+    // Demo fallback so the layout is visible without the file
+    text = `Volume 1
+Date : Spring 2022
+Urlpdf: #
+Urlcoverpagejpg:
+Urlvolcontent: #
+
+Volume 2
+Date : Fall 2022
+Urlpdf: #
+Urlcoverpagejpg:
+Urlvolcontent: #
+
+Volume 3
+Date : Spring 2023
+Urlpdf: #
+Urlcoverpagejpg:
+Urlvolcontent: #`;
+  }
+
+  const volumes = parseVolumes(text);
+  countEl.textContent = `${volumes.length} published · ${volumes.length} shown`;
+  grid.innerHTML = '';
+
+  if (!volumes.length) {
+    grid.innerHTML = '<div class="status-msg error-msg"><div class="icon">⚠️</div>No volumes found in SBPJ-contents.txt</div>';
+    return;
+  }
+
+  volumes.forEach(vol => grid.appendChild(makeCard(vol)));
+}
+
+function parseVolumes(text) {
+  const blocks = text.trim().split(/\n\s*\n/);
+  return blocks.map(block => {
+    const lines = block.split('\n').map(l => l.trim()).filter(Boolean);
+    const vol = {};
+    lines.forEach(line => {
+      const [key, ...rest] = line.split(':');
+      const k = key.trim().toLowerCase().replace(/\s/g,'');
+      const v = rest.join(':').trim();
+      if (k === 'volume1' || line.toLowerCase().startsWith('volume')) {
+        vol.number = line.replace(/volume\s*/i,'').split(/\s/)[0];
+        vol.title = line;
+      } else if (k === 'date') { vol.date = v; }
+      else if (k === 'urlpdf') { vol.pdf = v; }
+      else if (k === 'urlcoverpagejpg') { vol.cover = v; }
+      else if (k === 'urlvolcontent') { vol.content = v; }
+    });
+    // handle "Volume N" as a full line
+    if (!vol.number) {
+      const m = lines[0].match(/volume\s*(\S+)/i);
+      if (m) vol.number = m[1];
+    }
+    return vol;
+  }).filter(v => v.number);
+}
+
+function makeCard(vol) {
+  const card = document.createElement('div');
+  card.className = 'vol-card';
+
+  let coverHTML;
+  if (vol.cover && vol.cover !== '#' && vol.cover !== '') {
+    coverHTML = `<img class="vol-cover" src="${vol.cover}" alt="Volume ${vol.number} cover" loading="lazy">`;
+  } else {
+    coverHTML = `
+      <div class="vol-cover-placeholder">
+        <div class="big-num">${vol.number}</div>
+        <div class="label">Volume</div>
+      </div>`;
+  }
+
+  const pdfLink = vol.pdf && vol.pdf !== '#'
+    ? `<a class="vol-link pdf" href="${vol.pdf}" target="_blank">📄 PDF</a>` : '';
+  const contentLink = vol.content && vol.content !== '#'
+    ? `<a class="vol-link content" href="${vol.content}" target="_blank">🔗 Contents</a>` : '';
+
+  card.innerHTML = `
+    ${coverHTML}
+    <div class="vol-info">
+      <h3>Volume ${vol.number}</h3>
+      <div class="vol-date">${vol.date || ''}</div>
+      <div class="vol-links">${pdfLink}${contentLink}</div>
+    </div>`;
+  return card;
+}
+
+loadVolumes();
+</script>
+
+</body>
+</html>
