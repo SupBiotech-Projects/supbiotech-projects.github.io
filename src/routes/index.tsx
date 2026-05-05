@@ -195,8 +195,8 @@ function Index() {
             <img
               src={journalLogo}
               alt="SupBiotech Projects Journal logo"
-              width={40}
-              height={40}
+              width={80}
+              height={80}
               className="h-9 w-9 object-contain"
             />
             <span className="hidden text-sm font-semibold tracking-tight text-foreground sm:inline">
