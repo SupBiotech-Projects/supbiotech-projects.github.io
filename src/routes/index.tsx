@@ -71,7 +71,7 @@ function VolumeCard({ volume, index }: { volume: Volume; index: number }) {
         {hasCover ? (
           <img
             src={volume.coverUrl}
-            alt={`Cover of Volume ${volume.number}`}
+            alt={`Cover of Volume ${volume.volume}`}
             loading="lazy"
             className="h-full w-full object-contain bg-black transition-transform duration-500 group-hover:scale-105"
           />
@@ -82,7 +82,7 @@ function VolumeCard({ volume, index }: { volume: Volume; index: number }) {
               <div className="text-xs uppercase tracking-widest opacity-70">
                 Volume
               </div>
-              <div className="text-3xl font-bold">{volume.number}</div>
+              <div className="text-3xl font-bold">{volume.volume}</div>
               <div className="mt-2 text-xs opacity-70">Coming soon</div>
             </div>
           </div>
@@ -92,7 +92,7 @@ function VolumeCard({ volume, index }: { volume: Volume; index: number }) {
       <div className="p-4">
         <div className="mb-4">
           <div className="text-xs font-medium uppercase tracking-widest text-muted-foreground">
-            Volume {volume.number}
+            Volume {volume.volume}
           </div>
           <div className="text-sm font-semibold text-foreground">
             {volume.date || "Date TBA"}
@@ -106,7 +106,7 @@ function VolumeCard({ volume, index }: { volume: Volume; index: number }) {
               target="_blank"
               rel="noreferrer noopener"
               className="inline-flex items-center gap-1 rounded-full bg-primary px-3 py-1.5 text-[11px] font-medium uppercase tracking-wider text-primary-foreground hover:bg-primary/90"
-              aria-label={`View contents of Volume ${volume.number}`}
+              aria-label={`View contents of Volume ${volume.volume}`}
             >
               <ExternalLink className="h-3 w-3" aria-hidden />
               View contents
@@ -120,7 +120,7 @@ function VolumeCard({ volume, index }: { volume: Volume; index: number }) {
               target="_blank"
               rel="noreferrer noopener"
               className="inline-flex items-center gap-1 rounded-full bg-secondary px-3 py-1.5 text-[11px] font-medium uppercase tracking-wider text-secondary-foreground hover:bg-accent hover:text-accent-foreground"
-              aria-label={`Download PDF of Volume ${volume.number}`}
+              aria-label={`Download PDF of Volume ${volume.volume}`}
             >
               <FileText className="h-3 w-3" aria-hidden />
               PDF
