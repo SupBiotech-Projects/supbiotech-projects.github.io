@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SupBiotech Projects Journal — Volume 8</title>
+  <style>
+    :root {
+      --card: #ffffff;
+      --ink: #2f2723;
+      --muted: #746760;
+      --accent: #8b4a35;
+      --accent-dark: #5f2f21;
+      --line: #eaded8;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: linear-gradient(135deg, #f5eee9 0%, #fffaf6 45%, #efe4dc 100%);
+      color: var(--ink);
+      line-height: 1.55;
+    }
+
+    .page {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 48px 22px 64px;
+    }
+
+    header {
+      text-align: center;
+      padding: 42px 28px;
+      background: linear-gradient(135deg, #4a241b, #8b4a35);
+      color: white;
+      border-radius: 28px;
+      box-shadow: 0 18px 40px rgba(74, 36, 27, 0.25);
+      margin-bottom: 34px;
+    }
+
+    header .label {
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      font-size: 0.78rem;
+      opacity: 0.86;
+      margin-bottom: 12px;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(2.2rem, 5vw, 4.2rem);
+      line-height: 1.05;
+    }
+
+    .meta {
+      margin-top: 18px;
+      font-size: 1.1rem;
+      opacity: 0.92;
+    }
+
+    .intro {
+      background: rgba(255, 255, 255, 0.78);
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      padding: 22px 26px;
+      margin-bottom: 26px;
+      color: var(--muted);
+    }
+
+    .toc { display: grid; gap: 18px; }
+
+    .article {
+      display: grid;
+      grid-template-columns: 74px 1fr auto;
+      gap: 20px;
+      align-items: center;
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      padding: 20px;
+      box-shadow: 0 10px 28px rgba(47, 39, 35, 0.08);
+      transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+    }
+
+    .article:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 16px 36px rgba(47, 39, 35, 0.13);
+      border-color: #d9bdb0;
+    }
+
+    .page-num {
+      width: 58px;
+      height: 58px;
+      border-radius: 18px;
+      display: grid;
+      place-items: center;
+      background: #f3e6df;
+      color: var(--accent-dark);
+      font-weight: 700;
+      font-size: 1.05rem;
+    }
+
+    .content h2 {
+      margin: 0 0 8px;
+      font-size: 1.12rem;
+      line-height: 1.35;
+      text-transform: none;
+    }
+
+    .authors {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .button {
+      display: inline-block;
+      text-decoration: none;
+      white-space: nowrap;
+      color: white;
+      background: var(--accent);
+      padding: 11px 16px;
+      border-radius: 999px;
+      font-weight: 700;
+      font-size: 0.92rem;
+      transition: background 0.18s ease, transform 0.18s ease;
+    }
+
+    .button:hover {
+      background: var(--accent-dark);
+      transform: scale(1.03);
+    }
+
+    footer {
+      text-align: center;
+      color: var(--muted);
+      margin-top: 34px;
+      font-size: 0.92rem;
+    }
+
+    @media (max-width: 760px) {
+      .article { grid-template-columns: 1fr; gap: 14px; }
+      .page-num {
+        width: fit-content;
+        min-width: 68px;
+        height: 42px;
+        border-radius: 999px;
+      }
+      .button { width: 100%; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <header>
+      <div class="label">Applied Transversal Projects Program · Fil Rouge</div>
+      <h1>SupBiotech Projects Journal</h1>
+      <div class="meta">Volume 8 · February 2025</div>
+    </header>
+
+    <section class="intro">
+      <strong>Contents.</strong> Each article links directly to its starting page in the PDF version of Volume 8.
+    </section>
+
+    <section class="toc" aria-label="Contents">
+      <article class="article">
+        <div class="page-num">p. 3</div>
+        <div class="content">
+          <h2>Evaluating the specificity and efficacy of purified VHH antibody fragment targeting GFAP in astrocytes and brain organoids</h2>
+          <p class="authors">Léna Christ, Caitline Guilloux, Elodie Noël, Maïlys Portier, Camille Ropert, Chloé Roudier, Julie Vaiani, Joséphine Poiret</p>
+        </div>
+        <a class="button" href="https://supbiotech-projects.github.io/SBPJ_vols/Vol8/SBPJVOL8_compressed.pdf#page=4" target="_blank" rel="noopener">Open article</a>
+      </article>
+
+      <article class="article">
+        <div class="page-num">p. 13</div>
+        <div class="content">
+          <h2>Improved bioproduction of prodigiosin by Serratia marcescens using peanut powder via a low-cost process</h2>
+          <p class="authors">Heloise Bauer, Jade Foret, Marina Gayat, Rémy Hubert, Alyssia Kassa, Tiffany Leroy, Lea Massard, Benjamin Toustou</p>
+        </div>
+        <a class="button" href="https://supbiotech-projects.github.io/SBPJ_vols/Vol8/SBPJVOL8_compressed.pdf#page=14" target="_blank" rel="noopener">Open article</a>
+      </article>
+
+      <article class="article">
+        <div class="page-num">p. 26</div>
+        <div class="content">
+          <h2>Design of a mycelium-based insulating biomaterial: a sustainable and more efficient insulation</h2>
+          <p class="authors">Valentine Capillon, Jade Coullomb, Pauline Garon, Antoine Goncalves, Florian Marette, Coralie Menuisier, Mathis Turpin</p>
+        </div>
+        <a class="button" href="https://supbiotech-projects.github.io/SBPJ_vols/Vol8/SBPJVOL8_compressed.pdf#page=27" target="_blank" rel="noopener">Open article</a>
+      </article>
+
+      <article class="article">
+        <div class="page-num">p. 32</div>
+        <div class="content">
+          <h2>Combating resistant bacteria: exploring the synergy of essential oils and antibiotics</h2>
+          <p class="authors">Antoine Bonnet, Orane Calvo de Olmos, Ines Darik, Ceren Karataban, Clarisse Lemattre, Meriem Mohraz, Anaëlle Vigne-Haddad</p>
+        </div>
+        <a class="button" href="https://supbiotech-projects.github.io/SBPJ_vols/Vol8/SBPJVOL8_compressed.pdf#page=33" target="_blank" rel="noopener">Open article</a>
+      </article>
+
+      <article class="article">
+        <div class="page-num">p. 41</div>
+        <div class="content">
+          <h2>Evaluating essential oils as alternative antifungal agents: potential against candidiasis</h2>
+          <p class="authors">Noémie Forissier, Ouday Hamidi, Baudouin Klein, Armen Okhkian, Arunaan Raguleswaran, Harena Rasolondraibe, Joachim Schertz</p>
+        </div>
+        <a class="button" href="https://supbiotech-projects.github.io/SBPJ_vols/Vol8/SBPJVOL8_compressed.pdf#page=42" target="_blank" rel="noopener">Open article</a>
+      </article>
+
+      <article class="article">
+        <div class="page-num">p. 49</div>
+        <div class="content">
+          <h2>Highlighting the therapeutic potential of thymol essential oil against Aspergillosis, a fungal respiratory disease</h2>
+          <p class="authors">Marie Darrigade, Marie Gallian, Sarah Kolb, Charline Roberge, Manon Soares, Victoire Streicher, Eva Trinh Thai</p>
+        </div>
+        <a class="button" href="https://supbiotech-projects.github.io/SBPJ_vols/Vol8/SBPJVOL8_compressed.pdf#page=50" target="_blank" rel="noopener">Open article</a>
+      </article>
+    </section>
+
+    <footer>
+      SupBiotech Projects Journal · Volume 8 · February 2025
+    </footer>
+  </main>
+</body>
+</html>
+
