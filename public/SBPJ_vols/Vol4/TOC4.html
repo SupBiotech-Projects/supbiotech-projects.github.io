@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SupBiotech Projects Journal — Volume 4</title>
+  <style>
+    :root {
+      --card: #ffffff;
+      --ink: #2f2723;
+      --muted: #746760;
+      --accent: #8b4a35;
+      --accent-dark: #5f2f21;
+      --line: #eaded8;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: linear-gradient(135deg, #f5eee9 0%, #fffaf6 45%, #efe4dc 100%);
+      color: var(--ink);
+      line-height: 1.55;
+    }
+
+    .page {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 48px 22px 64px;
+    }
+
+    header {
+      text-align: center;
+      padding: 42px 28px;
+      background: linear-gradient(135deg, #4a241b, #8b4a35);
+      color: white;
+      border-radius: 28px;
+      box-shadow: 0 18px 40px rgba(74, 36, 27, 0.25);
+      margin-bottom: 34px;
+    }
+
+    header .label {
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      font-size: 0.78rem;
+      opacity: 0.86;
+      margin-bottom: 12px;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(2.2rem, 5vw, 4.2rem);
+      line-height: 1.05;
+    }
+
+    .meta {
+      margin-top: 18px;
+      font-size: 1.1rem;
+      opacity: 0.92;
+    }
+
+    .intro {
+      background: rgba(255, 255, 255, 0.78);
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      padding: 22px 26px;
+      margin-bottom: 26px;
+      color: var(--muted);
+    }
+
+    .toc { display: grid; gap: 18px; }
+
+    .article {
+      display: grid;
+      grid-template-columns: 74px 1fr auto;
+      gap: 20px;
+      align-items: center;
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      padding: 20px;
+      box-shadow: 0 10px 28px rgba(47, 39, 35, 0.08);
+      transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+    }
+
+    .article:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 16px 36px rgba(47, 39, 35, 0.13);
+      border-color: #d9bdb0;
+    }
+
+    .page-num {
+      width: 58px;
+      height: 58px;
+      border-radius: 18px;
+      display: grid;
+      place-items: center;
+      background: #f3e6df;
+      color: var(--accent-dark);
+      font-weight: 700;
+      font-size: 1.05rem;
+    }
+
+    .content h2 {
+      margin: 0 0 8px;
+      font-size: 1.12rem;
+      line-height: 1.35;
+      text-transform: none;
+    }
+
+    .authors {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .button {
+      display: inline-block;
+      text-decoration: none;
+      white-space: nowrap;
+      color: white;
+      background: var(--accent);
+      padding: 11px 16px;
+      border-radius: 999px;
+      font-weight: 700;
+      font-size: 0.92rem;
+      transition: background 0.18s ease, transform 0.18s ease;
+    }
+
+    .button:hover {
+      background: var(--accent-dark);
+      transform: scale(1.03);
+    }
+
+    footer {
+      text-align: center;
+      color: var(--muted);
+      margin-top: 34px;
+      font-size: 0.92rem;
+    }
+
+    @media (max-width: 760px) {
+      .article { grid-template-columns: 1fr; gap: 14px; }
+      .page-num {
+        width: fit-content;
+        min-width: 68px;
+        height: 42px;
+        border-radius: 999px;
+      }
+      .button { width: 100%; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <header>
+      <div class="label">Applied Transversal Projects Program · Fil Rouge</div>
+      <h1>SupBiotech Projects Journal</h1>
+      <div class="meta">Volume 4 · January 2020</div>
+    </header>
+
+    <section class="intro">
+      <strong>Contents.</strong> Each article links directly to its starting page in the PDF version of Volume 4.
+    </section>
+
+    <section class="toc" aria-label="Contents">
+      <article class="article">
+        <div class="page-num">p. 7</div>
+        <div class="content">
+          <h2>Evaluation of the potential agronomic interest of municipal waste compost leachate for its revalorisation as biologic fertilizer</h2>
+          <p class="authors">Farah Amara, Thomas Grossetete, Maxime Laheurte, Yasmine Othmani, Léna Philip, Oriane Saboureau</p>
+        </div>
+        <a class="button" href="https://supbiotech-projects.github.io/SBPJ_vols/Vol4/SBPJVOL4.pdf#page=7" target="_blank" rel="noopener">Open article</a>
+      </article>
+
+      <article class="article">
+        <div class="page-num">p. 15</div>
+        <div class="content">
+          <h2>Comparative analyses of evolved Escherichia coli strains using an automated directed evolution technique</h2>
+          <p class="authors">Elodie Gittard, Marjorie Grée, Charlotte Greselle, Andréa Ruty, Séverine Soille, David Leistenschneider</p>
+        </div>
+        <a class="button" href="https://supbiotech-projects.github.io/SBPJ_vols/Vol4/SBPJVOL4.pdf#page=15" target="_blank" rel="noopener">Open article</a>
+      </article>
+
+      <article class="article">
+        <div class="page-num">p. 17</div>
+        <div class="content">
+          <h2>Endocrine Disruptors Biosensor based on Competitive inhibition between dyes and endocrine disruptors for ligninolytic enzymes</h2>
+          <p class="authors">Quentin Weiss, Guillaume Latour, Amandeep Kaur, Sophie Jeanjean, Julien Plisson</p>
+        </div>
+        <a class="button" href="https://supbiotech-projects.github.io/SBPJ_vols/Vol4/SBPJVOL4.pdf#page=17" target="_blank" rel="noopener">Open article</a>
+      </article>
+
+      <article class="article">
+        <div class="page-num">p. 25</div>
+        <div class="content">
+          <h2>Antifungal properties of essential oils against aspergillosis</h2>
+          <p class="authors">Dauphine Boutte, Julie Calmet, Adrien Dardinier, Julie Donzier, Mathilde Ducoudray, Fanny Marceau, Charlotte Visconti</p>
+        </div>
+        <a class="button" href="https://supbiotech-projects.github.io/SBPJ_vols/Vol4/SBPJVOL4.pdf#page=25" target="_blank" rel="noopener">Open article</a>
+      </article>
+
+      <article class="article">
+        <div class="page-num">p. 35</div>
+        <div class="content">
+          <h2>Curcumin/Piperine as a potential alternative to chemotherapeutic agents on lung cancer cells</h2>
+          <p class="authors">Carolina Araiza, Amira Bellalah, Marine Chamoreau, Yasmine Daïk, Alexandra Lozano</p>
+        </div>
+        <a class="button" href="https://supbiotech-projects.github.io/SBPJ_vols/Vol4/SBPJVOL4.pdf#page=35" target="_blank" rel="noopener">Open article</a>
+      </article>
+
+      <article class="article">
+        <div class="page-num">p. 41</div>
+        <div class="content">
+          <h2>Curcumin and crocin as natural substitutes for current chemotherapeutic agents</h2>
+          <p class="authors">Antoine Retho, Léa Lisiecki, Sofia Hervais, Minerva Esparza, Tais Romero</p>
+        </div>
+        <a class="button" href="https://supbiotech-projects.github.io/SBPJ_vols/Vol4/SBPJVOL4.pdf#page=41" target="_blank" rel="noopener">Open article</a>
+      </article>
+
+      <article class="article">
+        <div class="page-num">p. 55</div>
+        <div class="content">
+          <h2>Adapting a microfluidic device for applications in 3D cell culture</h2>
+          <p class="authors">Pierre-Emmanuel Corbet, Mary-Amélie Masson, Pauline Mégalli, Thibaud Metais, Julie Six</p>
+        </div>
+        <a class="button" href="https://supbiotech-projects.github.io/SBPJ_vols/Vol4/SBPJVOL4.pdf#page=55" target="_blank" rel="noopener">Open article</a>
+      </article>
+
+      <article class="article">
+        <div class="page-num">p. 61</div>
+        <div class="content">
+          <h2>Microwell strategy for high throughput uniform microtissue generation</h2>
+          <p class="authors">Maxime Mauviel, Elodie Rosa, Younes Bakhalek, Ulysse Godet</p>
+        </div>
+        <a class="button" href="https://supbiotech-projects.github.io/SBPJ_vols/Vol4/SBPJVOL4.pdf#page=61" target="_blank" rel="noopener">Open article</a>
+      </article>
+
+      <article class="article">
+        <div class="page-num">p. 69</div>
+        <div class="content">
+          <h2>Light sheet fluorescence microscopy: a qualitative comparison of four different clearing methods in plants</h2>
+          <p class="authors">Julien Ballbé Y Sabaté, Anne Fauvel, Agathe Claude, Sarah Pierre, Angélina Mole, Yanaëlle Rousseau</p>
+        </div>
+        <a class="button" href="https://supbiotech-projects.github.io/SBPJ_vols/Vol4/SBPJVOL4.pdf#page=69" target="_blank" rel="noopener">Open article</a>
+      </article>
+
+      <article class="article">
+        <div class="page-num">p. 77</div>
+        <div class="content">
+          <h2>IGEM - Cinergy: degradation of cigarette butts to produce electricity thanks to a microbial fuel cell</h2>
+          <p class="authors">Ambre Leleu, Lucas Bourmancé, Mélissa Chagnaud, Caroline Suant, Chloé Doizelet, Eva Zanditenas, Julie Breiner, Marina Firpion, Mathilde Barbier, Sarah Duquesne</p>
+        </div>
+        <a class="button" href="https://supbiotech-projects.github.io/SBPJ_vols/Vol4/SBPJVOL4.pdf#page=77" target="_blank" rel="noopener">Open article</a>
+      </article>
+
+      <article class="article">
+        <div class="page-num">p. 87</div>
+        <div class="content">
+          <h2>IGEM – Diane: an aptamer-based device for rapid detection of pathogenic bacteria in biological fluids</h2>
+          <p class="authors">Léa Durix, Tara Fournier, Elise Cambon, Chloe Charendoff, Mathieu De Jode, Clara Delamare, Quentin Mosagna, Marie Sabatou, Vincent Saverat, Ronan Soudy, Laurence Vigne, Maria-Vittoria Mazzuoli, Alexandre Zidat, Deshmukh Gopaul</p>
+        </div>
+        <a class="button" href="https://supbiotech-projects.github.io/SBPJ_vols/Vol4/SBPJVOL4.pdf#page=87" target="_blank" rel="noopener">Open article</a>
+      </article>
+
+      <article class="article">
+        <div class="page-num">p. 95</div>
+        <div class="content">
+          <h2>First Fil Rouge Student Symposium : Nov. 13th, 2019</h2>
+          <p class="authors">Sup'Biotech</p>
+        </div>
+        <a class="button" href="https://supbiotech-projects.github.io/SBPJ_vols/Vol4/SBPJVOL4.pdf#page=95" target="_blank" rel="noopener">Open article</a>
+      </article>
+    </section>
+
+    <footer>
+      SupBiotech Projects Journal · Volume 4 · January 2020
+    </footer>
+  </main>
+</body>
+</html>
+
