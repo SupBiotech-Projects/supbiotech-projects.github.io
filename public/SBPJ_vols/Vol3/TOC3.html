@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SupBiotech Projects Journal — Volume 3</title>
+  <style>
+    :root {
+      --card: #ffffff;
+      --ink: #2f2723;
+      --muted: #746760;
+      --accent: #8b4a35;
+      --accent-dark: #5f2f21;
+      --line: #eaded8;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: linear-gradient(135deg, #f5eee9 0%, #fffaf6 45%, #efe4dc 100%);
+      color: var(--ink);
+      line-height: 1.55;
+    }
+
+    .page {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 48px 22px 64px;
+    }
+
+    header {
+      text-align: center;
+      padding: 42px 28px;
+      background: linear-gradient(135deg, #4a241b, #8b4a35);
+      color: white;
+      border-radius: 28px;
+      box-shadow: 0 18px 40px rgba(74, 36, 27, 0.25);
+      margin-bottom: 34px;
+    }
+
+    header .label {
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      font-size: 0.78rem;
+      opacity: 0.86;
+      margin-bottom: 12px;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(2.2rem, 5vw, 4.2rem);
+      line-height: 1.05;
+    }
+
+    .meta {
+      margin-top: 18px;
+      font-size: 1.1rem;
+      opacity: 0.92;
+    }
+
+    .intro {
+      background: rgba(255, 255, 255, 0.78);
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      padding: 22px 26px;
+      margin-bottom: 26px;
+      color: var(--muted);
+    }
+
+    .toc { display: grid; gap: 18px; }
+
+    .article {
+      display: grid;
+      grid-template-columns: 74px 1fr auto;
+      gap: 20px;
+      align-items: center;
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      padding: 20px;
+      box-shadow: 0 10px 28px rgba(47, 39, 35, 0.08);
+      transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+    }
+
+    .article:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 16px 36px rgba(47, 39, 35, 0.13);
+      border-color: #d9bdb0;
+    }
+
+    .page-num {
+      width: 58px;
+      height: 58px;
+      border-radius: 18px;
+      display: grid;
+      place-items: center;
+      background: #f3e6df;
+      color: var(--accent-dark);
+      font-weight: 700;
+      font-size: 1.05rem;
+    }
+
+    .content h2 {
+      margin: 0 0 8px;
+      font-size: 1.12rem;
+      line-height: 1.35;
+      text-transform: none;
+    }
+
+    .authors {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .button {
+      display: inline-block;
+      text-decoration: none;
+      white-space: nowrap;
+      color: white;
+      background: var(--accent);
+      padding: 11px 16px;
+      border-radius: 999px;
+      font-weight: 700;
+      font-size: 0.92rem;
+      transition: background 0.18s ease, transform 0.18s ease;
+    }
+
+    .button:hover {
+      background: var(--accent-dark);
+      transform: scale(1.03);
+    }
+
+    footer {
+      text-align: center;
+      color: var(--muted);
+      margin-top: 34px;
+      font-size: 0.92rem;
+    }
+
+    @media (max-width: 760px) {
+      .article { grid-template-columns: 1fr; gap: 14px; }
+      .page-num {
+        width: fit-content;
+        min-width: 68px;
+        height: 42px;
+        border-radius: 999px;
+      }
+      .button { width: 100%; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <header>
+      <div class="label">Applied Transversal Projects · Fil Rouge</div>
+      <h1>SupBiotech Projects Journal</h1>
+      <div class="meta">Volume 3 · January 2019</div>
+    </header>
+
+    <section class="intro">
+      <strong>Contents.</strong> Each article links directly to its starting page in the PDF version of Volume 3.
+    </section>
+
+    <section class="toc" aria-label="Contents">
+      <article class="article">
+        <div class="page-num">p. 7</div>
+        <div class="content">
+          <h2>Tests assessing the efficacy of natural antifungal compounds and their efficient dosage with Aspergillus oryzae</h2>
+          <p class="authors">Camille Beaulier, Constance Dollet, Victoria Launay, Justine Marie dit Calais</p>
+        </div>
+        <a class="button" href="https://supbiotech-projects.github.io/SBPJ_vols/Vol3/SBPJVOL3.pdf#page=7" target="_blank" rel="noopener">Open article</a>
+      </article>
+
+      <article class="article">
+        <div class="page-num">p. 13</div>
+        <div class="content">
+          <h2>Wine or water? … a mineral point of view</h2>
+          <p class="authors">Alexandre Tan-Lhernould, Adèle Alloin, Etienne Lallemand, Noé Legrelle, Julien Morin, Damien Lemaire</p>
+        </div>
+        <a class="button" href="https://supbiotech-projects.github.io/SBPJ_vols/Vol3/SBPJVOL3.pdf#page=13" target="_blank" rel="noopener">Open article</a>
+      </article>
+
+      <article class="article">
+        <div class="page-num">p. 17</div>
+        <div class="content">
+          <h2>Effect of curcumin, lomustine and berberine on the glioblastoma tumor</h2>
+          <p class="authors">Antoine Alliaume, Odelia Bitton, Bilguissou Diallo, Robin Lacombe, Carine Mota de Jesus</p>
+        </div>
+        <a class="button" href="https://supbiotech-projects.github.io/SBPJ_vols/Vol3/SBPJVOL3.pdf#page=17" target="_blank" rel="noopener">Open article</a>
+      </article>
+
+      <article class="article">
+        <div class="page-num">p. 25</div>
+        <div class="content">
+          <h2>SNP in CYP2C19 gene’s impact for the metabolism of Clopidogrel</h2>
+          <p class="authors">Chloé Lortal, Léa Lortal, Margaux Mäder, Juliette Warnier</p>
+        </div>
+        <a class="button" href="https://supbiotech-projects.github.io/SBPJ_vols/Vol3/SBPJVOL3.pdf#page=25" target="_blank" rel="noopener">Open article</a>
+      </article>
+
+      <article class="article">
+        <div class="page-num">p. 31</div>
+        <div class="content">
+          <h2>Preliminary tests for the development of a device to detect endocrine disruptors in water by enzyme extracts from Pleurotus ostreatus</h2>
+          <p class="authors">Oumayma Aousji, Nicolas Berger-Picard, Agathe Jullien, Célia Munck, Roxane N’douba-Avi, Cyrille El Kassis, Tasrine Youssouf</p>
+        </div>
+        <a class="button" href="https://supbiotech-projects.github.io/SBPJ_vols/Vol3/SBPJVOL3.pdf#page=31" target="_blank" rel="noopener">Open article</a>
+      </article>
+
+      <article class="article">
+        <div class="page-num">p. 39</div>
+        <div class="content">
+          <h2>Role of epigenetic processes in the cellular regeneration of Platynereis dumerilii</h2>
+          <p class="authors">Tom Agnero-Rigot, Camille Kergaravat, Edouard Riey, Erwan Martin</p>
+        </div>
+        <a class="button" href="https://supbiotech-projects.github.io/SBPJ_vols/Vol3/SBPJVOL3.pdf#page=39" target="_blank" rel="noopener">Open article</a>
+      </article>
+
+      <article class="article">
+        <div class="page-num">p. 45</div>
+        <div class="content">
+          <h2>The use of biosourced inputs for hydroponic culture of aromatic herbs</h2>
+          <p class="authors">Jean-Rémi Loup, Nicolas Merieux, Julia Naudin, Claire Persyn</p>
+        </div>
+        <a class="button" href="https://supbiotech-projects.github.io/SBPJ_vols/Vol3/SBPJVOL3.pdf#page=45" target="_blank" rel="noopener">Open article</a>
+      </article>
+
+      <article class="article">
+        <div class="page-num">p. 53</div>
+        <div class="content">
+          <h2>Engineering E. coli BL21(DE3) for the production of rat pro-nerve growth factor, RNA III inhibiting peptide and the toxin/anti-toxin couple CcdB/CcdA</h2>
+          <p class="authors">Jonathan Naccache, Eléa Paillares, Gabriela Sachet-Fernandez</p>
+        </div>
+        <a class="button" href="https://supbiotech-projects.github.io/SBPJ_vols/Vol3/SBPJVOL3.pdf#page=53" target="_blank" rel="noopener">Open article</a>
+      </article>
+
+      <article class="article">
+        <div class="page-num">p. 65</div>
+        <div class="content">
+          <h2>Setting up an in vitro assay for drug testing based on 3D tumor spheroid imaging by light sheet fluorescence microscopy</h2>
+          <p class="authors">Camille Leconte, Camille Sous, Léonard Raimbault, Estelle Zhang</p>
+        </div>
+        <a class="button" href="https://supbiotech-projects.github.io/SBPJ_vols/Vol3/SBPJVOL3.pdf#page=65" target="_blank" rel="noopener">Open article</a>
+      </article>
+
+      <article class="article">
+        <div class="page-num">p. 71</div>
+        <div class="content">
+          <h2>Calibration of chromatography columns for the characterization of peptones</h2>
+          <p class="authors">Paul-Etienne Fontaine, Amélie Raby</p>
+        </div>
+        <a class="button" href="https://supbiotech-projects.github.io/SBPJ_vols/Vol3/SBPJVOL3.pdf#page=71" target="_blank" rel="noopener">Open article</a>
+      </article>
+    </section>
+
+    <footer>
+      SupBiotech Projects Journal · Volume 3 · January 2019
+    </footer>
+  </main>
+</body>
+</html>
+
