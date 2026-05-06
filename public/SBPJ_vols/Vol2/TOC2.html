@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SupBiotech Projects Journal — Volume 2</title>
+  <style>
+    :root {
+      --bg: #eef4f8;
+      --card: #ffffff;
+      --ink: #172f43;
+      --muted: #607383;
+      --accent: #245f92;
+      --accent-dark: #173f63;
+      --line: #d6e3ec;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: linear-gradient(135deg, #eaf3f8 0%, #f8fbfd 45%, #e4eef5 100%);
+      color: var(--ink);
+      line-height: 1.55;
+    }
+
+    .page {
+      max-width: 1050px;
+      margin: 0 auto;
+      padding: 48px 22px 64px;
+    }
+
+    header {
+      text-align: center;
+      padding: 42px 28px;
+      background: linear-gradient(135deg, #173f63, #245f92);
+      color: white;
+      border-radius: 28px;
+      box-shadow: 0 18px 40px rgba(23, 63, 99, 0.24);
+      margin-bottom: 34px;
+    }
+
+    header .label {
+      text-transform: uppercase;
+      letter-spacing: 0.22em;
+      font-size: 0.78rem;
+      opacity: 0.84;
+      margin-bottom: 12px;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(2.2rem, 5vw, 4.2rem);
+      line-height: 1.05;
+    }
+
+    .meta {
+      margin-top: 18px;
+      font-size: 1.1rem;
+      opacity: 0.92;
+    }
+
+    .intro {
+      background: rgba(255, 255, 255, 0.78);
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      padding: 22px 26px;
+      margin-bottom: 26px;
+      color: var(--muted);
+    }
+
+    .toc {
+      display: grid;
+      gap: 18px;
+    }
+
+    .article {
+      display: grid;
+      grid-template-columns: 74px 1fr auto;
+      gap: 20px;
+      align-items: center;
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      padding: 20px;
+      box-shadow: 0 10px 28px rgba(23, 47, 67, 0.08);
+      transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+    }
+
+    .article:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 16px 36px rgba(23, 47, 67, 0.13);
+      border-color: #b9d2e4;
+    }
+
+    .page-num {
+      width: 58px;
+      height: 58px;
+      border-radius: 18px;
+      display: grid;
+      place-items: center;
+      background: #e5f0f8;
+      color: var(--accent-dark);
+      font-weight: 700;
+      font-size: 1.05rem;
+    }
+
+    .content h2 {
+      margin: 0 0 8px;
+      font-size: 1.12rem;
+      line-height: 1.35;
+    }
+
+    .authors {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .button {
+      display: inline-block;
+      text-decoration: none;
+      white-space: nowrap;
+      color: white;
+      background: var(--accent);
+      padding: 11px 16px;
+      border-radius: 999px;
+      font-weight: 700;
+      font-size: 0.92rem;
+      transition: background 0.18s ease, transform 0.18s ease;
+    }
+
+    .button:hover {
+      background: var(--accent-dark);
+      transform: scale(1.03);
+    }
+
+    footer {
+      text-align: center;
+      color: var(--muted);
+      margin-top: 34px;
+      font-size: 0.92rem;
+    }
+
+    @media (max-width: 760px) {
+      .article {
+        grid-template-columns: 1fr;
+        gap: 14px;
+      }
+
+      .page-num {
+        width: fit-content;
+        min-width: 68px;
+        height: 42px;
+        border-radius: 999px;
+      }
+
+      .button {
+        width: 100%;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <header>
+      <div class="label">Numéro spécial Sciences Humaines et Sociales</div>
+      <h1>SupBiotech Projects Journal</h1>
+      <div class="meta">Volume 2 · Novembre 2018</div>
+    </header>
+
+    <section class="intro">
+      <strong>Sommaire.</strong> Chaque article renvoie directement à sa page de début dans le PDF du Volume 2.
+    </section>
+
+    <section class="toc" aria-label="Sommaire">
+      <article class="article">
+        <div class="page-num">p. 7</div>
+        <div class="content">
+          <h2>Au-delà de la CRISPR Democracy, la nécessité de l’appropriation du savoir</h2>
+          <p class="authors">Raimbault Léonard, Munck Célia, Naudin Julia, Persyn Claire, Vanhoutte Benjamin, Roirand Thomas, Rolfe Marilyn, Sachet Gabriela, Faussadier Xavier, Michaud Arthur, Nikolova Alexandra, Rota Louis</p>
+        </div>
+        <a class="button" href="https://supbiotech-projects.github.io/SBPJ_vols/Vol2/SBPJVOL2.pdf#page=7" target="_blank" rel="noopener">Ouvrir l’article</a>
+      </article>
+
+      <article class="article">
+        <div class="page-num">p. 11</div>
+        <div class="content">
+          <h2>Largage de moustiques génétiquement modifiés : un moyen de lutte efficace et sans risque contre les maladies ?</h2>
+          <p class="authors">Florence Aing, Florian Allanic, Valentin Aubry, Nigesh Gnaneswaran, Julie Hoang, Elina Lamarque, Damien Lemaire, Manon Madelenat, Camille Ponthieu, Kasthoori Senthilkumar, Julien Silva, Alexandre Tan-Lhernould</p>
+        </div>
+        <a class="button" href="https://supbiotech-projects.github.io/SBPJ_vols/Vol2/SBPJVOL2.pdf#page=11" target="_blank" rel="noopener">Ouvrir l’article</a>
+      </article>
+
+      <article class="article">
+        <div class="page-num">p. 15</div>
+        <div class="content">
+          <h2>Réguler la population de moustiques par la libération d’individus génétiquement modifiés : avantages et controverses</h2>
+          <p class="authors">Angelin Colyne, Berger Émilie, Bernard Jason, Cadieu Stanislas, Lasne Marie, Naccache Jonathan, N’douba Avi Roxane, Raby Amélie, Rezgui Alexis, Williams Maryline</p>
+        </div>
+        <a class="button" href="https://supbiotech-projects.github.io/SBPJ_vols/Vol2/SBPJVOL2.pdf#page=15" target="_blank" rel="noopener">Ouvrir l’article</a>
+      </article>
+
+      <article class="article">
+        <div class="page-num">p. 21</div>
+        <div class="content">
+          <h2>La libération des animaux génétiquement modifiés : une solution aux problèmes de santé publique ? L’exemple des moustiques génétiquement modifiés</h2>
+          <p class="authors">Tristan Bauduin, Camille Beaulier, Nicolas Berger-Picard, Marie Caulier, Constance Dollet, Cyrille El Kassis, Ulysse Hellouin, Camille Kergaravat, Noé Legrelle, Chloé Lortal, Margaux Mäder, Maude Marchais</p>
+        </div>
+        <a class="button" href="https://supbiotech-projects.github.io/SBPJ_vols/Vol2/SBPJVOL2.pdf#page=21" target="_blank" rel="noopener">Ouvrir l’article</a>
+      </article>
+
+      <article class="article">
+        <div class="page-num">p. 25</div>
+        <div class="content">
+          <h2>Leçons tirées d’une gestion de crise de la théorie à l’application concrète</h2>
+          <p class="authors">Blancho Amélie, Cauchois Mathilde, Lam Thuy Vy, Lepileur-Rodriguez Ambre, Parisot Elise, Simb Nag Emmanuelle, Thierry Elsa, Warnier Juliette, Yasotharan Mehalai, Youssouf Tasrine, Zehnaker Anielka, Zhang Estelle</p>
+        </div>
+        <a class="button" href="https://supbiotech-projects.github.io/SBPJ_vols/Vol2/SBPJVOL2.pdf#page=25" target="_blank" rel="noopener">Ouvrir l’article</a>
+      </article>
+    </section>
+
+    <footer>
+      SupBiotech Projects Journal · Volume 2 · Novembre 2018
+    </footer>
+  </main>
+</body>
+</html>
