@@ -13,13 +13,12 @@
       --white: #ffffff;
       --text: #102a2a;
       --muted: #5f7474;
+      --alert: #263238;
       --shadow: 0 18px 45px rgba(0, 0, 0, 0.10);
       --radius: 24px;
     }
 
-    * {
-      box-sizing: border-box;
-    }
+    * { box-sizing: border-box; }
 
     body {
       margin: 0;
@@ -52,6 +51,25 @@
       margin-top: -60px;
     }
 
+    .access-bar {
+      background: var(--alert);
+      color: white;
+      padding: 12px 22px;
+      border-radius: 16px;
+      box-shadow: var(--shadow);
+      margin-bottom: 35px;
+      font-size: 0.95rem;
+      font-weight: bold;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .access-bar span {
+      opacity: 0.85;
+      font-weight: normal;
+    }
+
     .section-title {
       font-size: 2rem;
       margin: 50px 0 24px;
@@ -64,20 +82,41 @@
     }
 
     .card {
+      position: relative;
       display: block;
       background: var(--white);
       padding: 28px;
+      padding-top: 72px;
       border-radius: var(--radius);
       box-shadow: var(--shadow);
       text-decoration: none;
       color: inherit;
       transition: transform 0.2s ease, box-shadow 0.2s ease;
-      min-height: 220px;
+      min-height: 235px;
+      overflow: hidden;
     }
 
     .card:hover {
       transform: translateY(-6px);
       box-shadow: 0 24px 60px rgba(0, 0, 0, 0.16);
+    }
+
+    .placeholder-img {
+      position: absolute;
+      top: 22px;
+      right: 22px;
+      width: 58px;
+      height: 58px;
+      border-radius: 18px;
+      background: linear-gradient(135deg, #dff5f3, #b6e8e4);
+      border: 2px solid #ffffff;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--teal);
+      font-size: 1.4rem;
+      font-weight: bold;
     }
 
     .tag {
@@ -95,6 +134,7 @@
       margin: 0 0 12px;
       font-size: 1.55rem;
       color: var(--teal);
+      max-width: 80%;
     }
 
     .card p {
@@ -104,34 +144,10 @@
       line-height: 1.55;
     }
 
-    .highlight {
-      background: #ffffff;
-      border-left: 8px solid var(--teal);
-      padding: 30px;
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-      margin-bottom: 35px;
-    }
-
     footer {
       padding: 40px 8%;
       color: var(--muted);
       text-align: center;
-    }
-
-    .button {
-      display: inline-block;
-      margin-top: 20px;
-      background: var(--teal);
-      color: white;
-      padding: 12px 18px;
-      border-radius: 14px;
-      font-weight: bold;
-      text-decoration: none;
-    }
-
-    .button:hover {
-      background: var(--dark-teal);
     }
   </style>
 </head>
@@ -145,10 +161,8 @@
 
   <main>
 
-    <div class="highlight">
-      <span class="tag">Reserved access</span>
-      <h2>Access reserved for SupBiotech students</h2>
-      <p>This page gathers useful academic and professional resources selected for SupBiotech students.</p>
+    <div class="access-bar">
+      Reserved access <span>for SupBiotech students</span>
     </div>
 
     <h2 class="section-title">Research and Lab Tools</h2>
@@ -156,18 +170,21 @@
     <section class="grid">
 
       <a class="card" href="https://supbiotechfr.sharepoint.com/teams/RechercheSB/Documents%20partages/Forms/AllItems.aspx?id=%2Fteams%2FRechercheSB%2FDocuments%20partages%2FFor%20students%20-%20Public%2FUSEFUL%20SITES%20SB%2Epdf&parent=%2Fteams%2FRechercheSB%2FDocuments%20partages%2FFor%20students%20-%20Public" target="_blank">
+        <div class="placeholder-img">JPG</div>
         <span class="tag">Publications</span>
         <h2>Access to publications</h2>
         <p>SupBiotech students have access to paid scientific journals, including Nature journals, plus useful scientific resources and directories.</p>
       </a>
 
       <a class="card" href="https://frankyates6.wixsite.com/sbrecherche/espace-etudiants" target="_blank">
+        <div class="placeholder-img">JPG</div>
         <span class="tag">Figures</span>
         <h2>Making scientific illustrations</h2>
         <p>A list of useful tools to create professional scientific illustrations, diagrams and graphical abstracts.</p>
       </a>
 
       <a class="card" href="https://f7c8eac9-47d6-4e8a-ac06-41332bd18d68.filesusr.com/ugd/fc74d9_517494ee25f1444ba64461c34add2d41.pdf" target="_blank">
+        <div class="placeholder-img">JPG</div>
         <span class="tag">Science tools</span>
         <h2>The tools you need to work in science</h2>
         <p>Master essential tools to work as a scientist and engineer in research, biotechnology and laboratory environments.</p>
@@ -180,18 +197,21 @@
     <section class="grid">
 
       <a class="card" href="https://supbiotech-projects.github.io/" target="_blank">
+        <div class="placeholder-img">JPG</div>
         <span class="tag">Student journal</span>
         <h2>SupBiotech Projects</h2>
         <p>The journal of SupBiotech students, highlighting student projects and scientific initiatives.</p>
       </a>
 
       <a class="card" href="https://www.youtube.com/watch?v=LVsI7kaIwFc" target="_blank">
+        <div class="placeholder-img">JPG</div>
         <span class="tag">Bibliography</span>
         <h2>Zotero tutorial</h2>
         <p>Learn how to manage bibliographical references with Zotero.</p>
       </a>
 
       <a class="card" href="https://frankyates6.wixsite.com/sbrecherche/mendeley" target="_blank">
+        <div class="placeholder-img">JPG</div>
         <span class="tag">Bibliography</span>
         <h2>Mendeley tutorial</h2>
         <p>Learn how to organize, cite and manage references with Mendeley.</p>
@@ -204,18 +224,21 @@
     <section class="grid">
 
       <a class="card" href="https://frankyates6.wixsite.com/sbrecherche/student-competitions" target="_blank">
+        <div class="placeholder-img">JPG</div>
         <span class="tag">Competitions</span>
         <h2>Student competitions</h2>
         <p>Take part in competitions, develop your own project and show your skills.</p>
       </a>
 
       <a class="card" href="https://frankyates6.wixsite.com/sbrecherche/calendrier" target="_blank">
+        <div class="placeholder-img">JPG</div>
         <span class="tag">Events</span>
         <h2>Scientific and biotech events</h2>
         <p>Selected events recommended by SupBiotech professors for students interested in science and biotechnology.</p>
       </a>
 
       <a class="card" href="https://frankyates6.wixsite.com/sbrecherche/calendrier" target="_blank">
+        <div class="placeholder-img">JPG</div>
         <span class="tag">English</span>
         <h2>Using English in science</h2>
         <p>Selected exercises and useful resources such as podcasts, videos and scientific English materials.</p>
@@ -228,18 +251,21 @@
     <section class="grid">
 
       <a class="card" href="https://www.linkedin.com" target="_blank">
+        <div class="placeholder-img">JPG</div>
         <span class="tag">R&D news</span>
         <h2>Interesting news for students</h2>
         <p>Follow research and development news relevant to biotechnology, innovation and scientific careers.</p>
       </a>
 
       <a class="card" href="https://www.linkedin.com" target="_blank">
+        <div class="placeholder-img">JPG</div>
         <span class="tag">Jobs</span>
         <h2>Jobs and opportunities</h2>
         <p>Find internship, job and career opportunities in biotechnology, research and related sectors.</p>
       </a>
 
       <a class="card" href="mailto:">
+        <div class="placeholder-img">JPG</div>
         <span class="tag">Newsletter</span>
         <h2>Internal R&D newsletter</h2>
         <p>Sign up for the internal R&D newsletter for SupBiotech students.</p>
