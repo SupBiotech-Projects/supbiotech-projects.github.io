@@ -74,7 +74,9 @@ function VolumeCard({ volume, index }: { volume: Volume; index: number }) {
           <div className="flex h-full w-full flex-col items-center justify-center gap-3 bg-gradient-hero text-primary-foreground">
             <BookOpen className="h-10 w-10 opacity-80" aria-hidden />
             <div className="text-center">
-              <div className="text-xs uppercase tracking-widest opacity-70">Volume</div>
+              <div className="text-xs uppercase tracking-widest opacity-70">
+                Volume
+              </div>
               <div className="text-3xl font-bold">{volume.volume}</div>
               <div className="mt-2 text-xs opacity-70">Coming soon</div>
             </div>
@@ -150,6 +152,7 @@ function Index() {
   }, []);
 
   const display: Volume[] = volumes;
+  const latestVolume = display[0];
 
   return (
     <main className="min-h-screen bg-background">
@@ -167,6 +170,7 @@ function Index() {
               height={40}
               className="h-12 w-auto object-contain"
             />
+
             <span className="hidden text-sm font-semibold tracking-tight text-foreground sm:inline">
               SupBiotech Projects Journal
             </span>
@@ -180,6 +184,7 @@ function Index() {
               height={32}
               className="hidden h-8 w-auto object-contain sm:block"
             />
+
             <Button asChild size="sm" variant="outline">
               <a
                 href={SITE_CONFIG.githubUrl}
@@ -208,48 +213,66 @@ function Index() {
           aria-hidden
         />
 
-        <div className="relative mx-auto flex max-w-6xl flex-col items-start gap-6 px-6 py-12 sm:py-16 md:py-20">
-          <span className="inline-flex items-center gap-2 rounded-full border border-primary-foreground/20 bg-primary-foreground/10 px-3 py-1 text-xs font-medium uppercase tracking-widest backdrop-blur">
-            Official site
-          </span>
+        <div className="relative mx-auto grid max-w-6xl grid-cols-1 items-center gap-10 px-6 py-12 sm:py-16 md:grid-cols-[1.2fr_0.8fr] md:py-20">
+          <div className="flex flex-col items-start gap-6">
+            <span className="inline-flex items-center gap-2 rounded-full border border-primary-foreground/20 bg-primary-foreground/10 px-3 py-1 text-xs font-medium uppercase tracking-widest backdrop-blur">
+              Official site
+            </span>
 
-          <h1 className="max-w-3xl text-4xl font-bold leading-tight tracking-tight sm:text-5xl md:text-6xl">
-            {SITE_CONFIG.title}
-          </h1>
+            <h1 className="max-w-3xl text-4xl font-bold leading-tight tracking-tight sm:text-5xl md:text-6xl">
+              {SITE_CONFIG.title}
+            </h1>
 
-          <p className="max-w-2xl text-base text-primary-foreground/80 sm:text-lg">
-            {SITE_CONFIG.tagline}
-          </p>
+            <p className="max-w-2xl text-base text-primary-foreground/80 sm:text-lg">
+              {SITE_CONFIG.tagline}
+            </p>
 
-          <div className="flex flex-wrap items-center gap-3 pt-2">
-            <Button
-              asChild
-              size="lg"
-              variant="secondary"
-              className="bg-primary-foreground text-foreground hover:bg-primary-foreground/90"
-            >
-              <a href="#volumes">
-                <BookOpen className="mr-2 h-4 w-4" />
-                Browse volumes
-              </a>
-            </Button>
-
-            <Button
-              asChild
-              size="lg"
-              variant="outline"
-              className="border-primary-foreground/30 bg-transparent text-primary-foreground hover:bg-primary-foreground/10 hover:text-primary-foreground"
-            >
-              <a
-                href={SITE_CONFIG.githubUrl}
-                target="_blank"
-                rel="noreferrer noopener"
+            <div className="flex flex-wrap items-center gap-3 pt-2">
+              <Button
+                asChild
+                size="lg"
+                variant="secondary"
+                className="bg-primary-foreground text-foreground hover:bg-primary-foreground/90"
               >
-                <Github className="mr-2 h-4 w-4" />
-                GitHub repositories
-              </a>
-            </Button>
+                <a href="#volumes">
+                  <BookOpen className="mr-2 h-4 w-4" />
+                  Browse volumes
+                </a>
+              </Button>
+
+              <Button
+                asChild
+                size="lg"
+                variant="outline"
+                className="border-primary-foreground/30 bg-transparent text-primary-foreground hover:bg-primary-foreground/10 hover:text-primary-foreground"
+              >
+                <a
+                  href={SITE_CONFIG.githubUrl}
+                  target="_blank"
+                  rel="noreferrer noopener"
+                >
+                  <Github className="mr-2 h-4 w-4" />
+                  GitHub repositories
+                </a>
+              </Button>
+            </div>
           </div>
+
+          {latestVolume?.coverUrl && (
+            <div className="hidden items-center justify-center md:flex">
+              <div className="relative rotate-6 transition-transform duration-500 hover:rotate-3">
+                <img
+                  src={latestVolume.coverUrl}
+                  alt={`Latest volume cover`}
+                  className="h-[420px] w-auto rounded-2xl border border-white/10 bg-black object-contain shadow-2xl"
+                />
+
+                <div className="absolute -bottom-4 left-6 rounded-full bg-white px-4 py-2 text-xs font-bold uppercase tracking-widest text-black shadow-lg">
+                  Latest Volume · {latestVolume.volume}
+                </div>
+              </div>
+            </div>
+          )}
         </div>
       </section>
 
@@ -282,6 +305,7 @@ function Index() {
               <span className="h-px w-8 bg-primary" />
               Archive
             </div>
+
             <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
               All volumes
             </h2>
@@ -296,7 +320,11 @@ function Index() {
 
         <div className="grid grid-cols-2 gap-5 sm:grid-cols-3 lg:grid-cols-4">
           {display.map((v, i) => (
-            <VolumeCard key={`${v.order}-${v.volume}`} volume={v} index={i} />
+            <VolumeCard
+              key={`${v.order}-${v.volume}`}
+              volume={v}
+              index={i}
+            />
           ))}
         </div>
       </section>
