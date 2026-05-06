@@ -1,0 +1,49 @@
+body {
+  margin: 0;
+  font-family: Inter, Arial, sans-serif;
+  background: #f6faf9;
+  color: #123;
+}
+
+.hero {
+  background: linear-gradient(135deg, #007b75, #004d4a);
+  color: white;
+  padding: 70px 8%;
+}
+
+.hero h1 {
+  font-size: 4rem;
+  margin: 0;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 24px;
+  padding: 50px 8%;
+}
+
+.card {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  padding: 24px;
+  background: white;
+  border-radius: 24px;
+  text-decoration: none;
+  color: inherit;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 45px rgba(0,0,0,0.13);
+}
+
+.card img {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  object-fit: cover;
+}
