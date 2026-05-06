@@ -208,7 +208,7 @@ function Index() {
           aria-hidden
         />
 
-        <div className="relative mx-auto flex max-w-6xl flex-col items-start gap-6 px-6 py-20 sm:py-28 md:py-32">
+        <div className="relative mx-auto flex max-w-6xl flex-col items-start gap-6 px-6 py-12 sm:py-16 md:py-20">
           <span className="inline-flex items-center gap-2 rounded-full border border-primary-foreground/20 bg-primary-foreground/10 px-3 py-1 text-xs font-medium uppercase tracking-widest backdrop-blur">
             Official site
           </span>
