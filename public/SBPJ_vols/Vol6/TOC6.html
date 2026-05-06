@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>SupBiotech Projects Journal — Volume 6</title>
+
   <style>
     :root {
       --card: #ffffff;
@@ -60,6 +61,46 @@
       opacity: 0.92;
     }
 
+    .header-extras {
+      margin-top: 28px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 34px;
+      flex-wrap: wrap;
+    }
+
+    .home-button {
+      display: inline-block;
+      text-decoration: none;
+      color: white;
+      background: rgba(255,255,255,0.14);
+      border: 1px solid rgba(255,255,255,0.22);
+      padding: 12px 18px;
+      border-radius: 999px;
+      font-weight: 700;
+      backdrop-filter: blur(6px);
+      transition: all 0.18s ease;
+    }
+
+    .home-button:hover {
+      background: rgba(255,255,255,0.22);
+      transform: translateY(-2px);
+    }
+
+    .cover-tilted {
+      width: 130px;
+      border-radius: 14px;
+      transform: rotate(-8deg);
+      box-shadow: 0 18px 35px rgba(0,0,0,0.28);
+      border: 4px solid rgba(255,255,255,0.9);
+      transition: transform 0.2s ease;
+    }
+
+    .cover-tilted:hover {
+      transform: rotate(-4deg) scale(1.03);
+    }
+
     .intro {
       background: rgba(255, 255, 255, 0.78);
       border: 1px solid var(--line);
@@ -69,7 +110,10 @@
       color: var(--muted);
     }
 
-    .toc { display: grid; gap: 18px; }
+    .toc {
+      display: grid;
+      gap: 18px;
+    }
 
     .article {
       display: grid;
@@ -81,7 +125,9 @@
       border-radius: 22px;
       padding: 20px;
       box-shadow: 0 10px 28px rgba(47, 39, 35, 0.08);
-      transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+      transition: transform 0.18s ease,
+                  box-shadow 0.18s ease,
+                  border-color 0.18s ease;
     }
 
     .article:hover {
@@ -125,7 +171,8 @@
       border-radius: 999px;
       font-weight: 700;
       font-size: 0.92rem;
-      transition: background 0.18s ease, transform 0.18s ease;
+      transition: background 0.18s ease,
+                  transform 0.18s ease;
     }
 
     .button:hover {
@@ -141,62 +188,154 @@
     }
 
     @media (max-width: 760px) {
-      .article { grid-template-columns: 1fr; gap: 14px; }
+
+      .article {
+        grid-template-columns: 1fr;
+        gap: 14px;
+      }
+
       .page-num {
         width: fit-content;
         min-width: 68px;
         height: 42px;
         border-radius: 999px;
       }
-      .button { width: 100%; text-align: center; }
+
+      .button {
+        width: 100%;
+        text-align: center;
+      }
+
+      .cover-tilted {
+        width: 95px;
+      }
+
+      .header-extras {
+        gap: 18px;
+      }
     }
   </style>
 </head>
+
 <body>
+
   <main class="page">
+
     <header>
-      <div class="label">Applied Transversal Projects Program · Fil Rouge</div>
+
+      <div class="label">
+        Applied Transversal Projects Program · Fil Rouge
+      </div>
+
       <h1>SupBiotech Projects Journal</h1>
-      <div class="meta">Volume 6 · February 2023</div>
+
+      <div class="meta">
+        Volume 6 · February 2023
+      </div>
+
+      <div class="header-extras">
+
+        <a class="home-button"
+           href="https://supbiotech-projects.github.io/"
+           target="_blank"
+           rel="noopener">
+          ← Back to Journal Website
+        </a>
+
+        <img
+          class="cover-tilted"
+          src="https://supbiotech-projects.github.io/SBPJ_vols/Vol6/cover6-feb23.png"
+          alt="Volume 6 Cover"
+        />
+
+      </div>
+
     </header>
 
     <section class="intro">
-      <strong>Contents.</strong> Each article links directly to its starting page in the PDF version of Volume 6.
+      <strong>Contents.</strong>
+      Each article links directly to its starting page in the PDF version of Volume 6.
     </section>
 
     <section class="toc" aria-label="Contents">
+
       <article class="article">
         <div class="page-num">p. 3</div>
+
         <div class="content">
-          <h2>A Platform for the Transformation of Bacteria to Produce Nanobodies</h2>
-          <p class="authors">Asma Berriche, Juliette Chiss, Audrey Duhamel, Estelle Garnier, Mariam Guirguis, Enora Herriau, Marine Ortega, Solène Zehnacker, Julien Grimaud</p>
+          <h2>
+            A Platform for the Transformation of Bacteria to Produce Nanobodies
+          </h2>
+
+          <p class="authors">
+            Asma Berriche, Juliette Chiss, Audrey Duhamel,
+            Estelle Garnier, Mariam Guirguis, Enora Herriau,
+            Marine Ortega, Solène Zehnacker, Julien Grimaud
+          </p>
         </div>
-        <a class="button" href="https://supbiotech-projects.github.io/SBPJ_vols/Vol6/SBPJVOL6_compressed.pdf#page=4" target="_blank" rel="noopener">Open article</a>
+
+        <a class="button"
+           href="https://supbiotech-projects.github.io/SBPJ_vols/Vol6/SBPJVOL6_compressed.pdf#page=4"
+           target="_blank"
+           rel="noopener">
+          Open article
+        </a>
       </article>
 
       <article class="article">
         <div class="page-num">p. 9</div>
+
         <div class="content">
-          <h2>Development of a Method to Produce Nanobodies Against GFAP as a Promising Tool in the Field of Neurodegenerative Diseases</h2>
-          <p class="authors">Agnès Ammar, Léa Cathaly, Morgane Chesnais, Adélaïde Ferment, Juliette Le Donge, Fatma M’Ghirbi, Sakina Mohamed, Melissa Saelens, Julien Grimaud</p>
+          <h2>
+            Development of a Method to Produce Nanobodies Against GFAP as a Promising Tool in the Field of Neurodegenerative Diseases
+          </h2>
+
+          <p class="authors">
+            Agnès Ammar, Léa Cathaly, Morgane Chesnais,
+            Adélaïde Ferment, Juliette Le Donge, Fatma M’Ghirbi,
+            Sakina Mohamed, Melissa Saelens, Julien Grimaud
+          </p>
         </div>
-        <a class="button" href="https://supbiotech-projects.github.io/SBPJ_vols/Vol6/SBPJVOL6_compressed.pdf#page=10" target="_blank" rel="noopener">Open article</a>
+
+        <a class="button"
+           href="https://supbiotech-projects.github.io/SBPJ_vols/Vol6/SBPJVOL6_compressed.pdf#page=10"
+           target="_blank"
+           rel="noopener">
+          Open article
+        </a>
       </article>
 
       <article class="article">
         <div class="page-num">p. 18</div>
+
         <div class="content">
-          <h2>Preliminary Study of the Optimal Growth Conditions for Serratia Marcescens Dedicated to Optimizing the Production of Prodigiosin for Scaling Up to Industrial Level</h2>
-          <p class="authors">Sullyvan Crepaux, Morgane Leveque, Maelle Rousselot, Marius Bat, Robin Veaux, Margot Vinand, Guillaume Chabanne, Paul Houët, Mathieu Serant, Julien Grimaud</p>
+          <h2>
+            Preliminary Study of the Optimal Growth Conditions for Serratia Marcescens Dedicated to Optimizing the Production of Prodigiosin for Scaling Up to Industrial Level
+          </h2>
+
+          <p class="authors">
+            Sullyvan Crepaux, Morgane Leveque, Maelle Rousselot,
+            Marius Bat, Robin Veaux, Margot Vinand,
+            Guillaume Chabanne, Paul Houët, Mathieu Serant,
+            Julien Grimaud
+          </p>
         </div>
-        <a class="button" href="https://supbiotech-projects.github.io/SBPJ_vols/Vol6/SBPJVOL6_compressed.pdf#page=19" target="_blank" rel="noopener">Open article</a>
+
+        <a class="button"
+           href="https://supbiotech-projects.github.io/SBPJ_vols/Vol6/SBPJVOL6_compressed.pdf#page=19"
+           target="_blank"
+           rel="noopener">
+          Open article
+        </a>
       </article>
+
     </section>
 
     <footer>
       SupBiotech Projects Journal · Volume 6 · February 2023
     </footer>
+
   </main>
+
 </body>
 </html>
-
