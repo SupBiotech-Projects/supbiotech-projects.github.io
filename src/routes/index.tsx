@@ -156,10 +156,7 @@ function Index() {
     };
   }, []);
 
-  const display: Volume[] = (() => {
-    const byNumber = new Map(volumes.map((v) => [v.number, v]));
-    const max = Math.max(MIN_VOLUMES, ...volumes.map((v) => v.number), 0);
-    const list: Volume[] = [];
+const display: Volume[] = volumes;
 
     for (let n = 1; n <= max; n++) {
       list.push(
@@ -328,7 +325,7 @@ function Index() {
 
         <div className="grid grid-cols-2 gap-5 sm:grid-cols-3 lg:grid-cols-4">
           {display.map((v, i) => (
-            <VolumeCard key={v.number} volume={v} index={i} />
+            <VolumeCard key={`${v.order}-${v.volume}`} volume={v} index={i} />
           ))}
         </div>
       </section>
