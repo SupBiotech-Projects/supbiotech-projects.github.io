@@ -3,7 +3,7 @@
 -Volume : 9
 -Date : February 2026
 -url small cover : https://supbiotech-projects.github.io/SBPJ_vols/Vol9/cover9-feb26.png
--url of page with contents of volume : https://example.com/volume
+-url of page with contents of volume : https://supbiotech-projects.github.io/SBPJ_vols/Vol9/TOC9.html
 -url pdf of journal : https://supbiotech-projects.github.io/SBPJ_vols/Vol9/SBPJVOL9_compressed.pdf
 
 *Volume
@@ -11,7 +11,7 @@
 -Volume : 8
 -Date : February 2025
 -url small cover : https://supbiotech-projects.github.io/SBPJ_vols/Vol8/cover8-feb25.png
--url of page with contents of volume : https://example.com/volume
+-url of page with contents of volume : https://supbiotech-projects.github.io/SBPJ_vols/Vol8/TOC8.html
 -url pdf of journal : https://supbiotech-projects.github.io/SBPJ_vols/Vol8/SBPJVOL8_compressed.pdf
 
 *Volume
@@ -19,7 +19,7 @@
 -Volume : 7
 -Date : February 2024
 -url small cover : https://supbiotech-projects.github.io/SBPJ_vols/Vol7/cover7-feb24.png
--url of page with contents of volume : https://example.com/volume
+-url of page with contents of volume : https://supbiotech-projects.github.io/SBPJ_vols/Vol7/TOC7.html
 -url pdf of journal : https://supbiotech-projects.github.io/SBPJ_vols/Vol7/SBPJ_vol7.pdf
 
 *Volume
@@ -27,7 +27,7 @@
 -Volume : 6
 -Date : February 2023
 -url small cover : https://supbiotech-projects.github.io/SBPJ_vols/Vol6/cover6-feb23.png
--url of page with contents of volume : https://example.com/volume
+-url of page with contents of volume : https://supbiotech-projects.github.io/SBPJ_vols/Vol6/TOC6.html
 -url pdf of journal : https://supbiotech-projects.github.io/SBPJ_vols/Vol6/SBPJVOL6_compressed.pdf
 
 *Volume
@@ -35,7 +35,7 @@
 -Volume : 4
 -Date : January 2020
 -url small cover : https://supbiotech-projects.github.io/SBPJ_vols/Vol4/cover4-jan20.png
--url of page with contents of volume : https://example.com/volume
+-url of page with contents of volume : https://supbiotech-projects.github.io/SBPJ_vols/Vol4/TOC4.html
 -url pdf of journal : https://supbiotech-projects.github.io/SBPJ_vols/Vol4/SBPJVOL4.pdf
 
 *Volume
@@ -43,7 +43,7 @@
 -Volume : 3
 -Date : January 2019
 -url small cover : https://supbiotech-projects.github.io/SBPJ_vols/Vol3/cover3-jan19.png
--url of page with contents of volume : https://example.com/volume
+-url of page with contents of volume : https://supbiotech-projects.github.io/SBPJ_vols/Vol3/TOC3.html
 -url pdf of journal : https://supbiotech-projects.github.io/SBPJ_vols/Vol3/SBPJVOL3.pdf
 
 *Volume
@@ -51,7 +51,7 @@
 -Volume : 2
 -Date : November 2018
 -url small cover : https://supbiotech-projects.github.io/SBPJ_vols/Vol2/cover2-nov18.png
--url of page with contents of volume : https://example.com/volume
+-url of page with contents of volume : https://supbiotech-projects.github.io/SBPJ_vols/Vol2/TOC2.html
 -url pdf of journal : https://supbiotech-projects.github.io/SBPJ_vols/Vol2/SBPJVOL2.pdf
 
 *Volume
@@ -59,5 +59,5 @@
 -Volume : 1
 -Date : March 2024
 -url small cover : https://supbiotech-projects.github.io/SBPJ_vols/Vol1/cover1-jan18.png
--url of page with contents of volume : https://example.com/volume
+-url of page with contents of volume : https://supbiotech-projects.github.io/SBPJ_vols/Vol1/TOC1.html
 -url pdf of journal : https://supbiotech-projects.github.io/SBPJ_vols/Vol1/SBPJVOL1.pdf
