@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>SupBiotech Projects Journal — Volume 1</title>
+
   <style>
     :root {
       --bg: #eef5f7;
@@ -63,6 +64,46 @@
       opacity: 0.92;
     }
 
+    .header-extras {
+      margin-top: 28px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 34px;
+      flex-wrap: wrap;
+    }
+
+    .home-button {
+      display: inline-block;
+      text-decoration: none;
+      color: white;
+      background: rgba(255,255,255,0.14);
+      border: 1px solid rgba(255,255,255,0.22);
+      padding: 12px 18px;
+      border-radius: 999px;
+      font-weight: 700;
+      backdrop-filter: blur(6px);
+      transition: all 0.18s ease;
+    }
+
+    .home-button:hover {
+      background: rgba(255,255,255,0.22);
+      transform: translateY(-2px);
+    }
+
+    .cover-tilted {
+      width: 130px;
+      border-radius: 14px;
+      transform: rotate(-8deg);
+      box-shadow: 0 18px 35px rgba(0,0,0,0.28);
+      border: 4px solid rgba(255,255,255,0.9);
+      transition: transform 0.2s ease;
+    }
+
+    .cover-tilted:hover {
+      transform: rotate(-4deg) scale(1.03);
+    }
+
     .intro {
       background: rgba(255, 255, 255, 0.76);
       border: 1px solid var(--line);
@@ -87,7 +128,9 @@
       border-radius: 22px;
       padding: 20px;
       box-shadow: 0 10px 28px rgba(24, 50, 58, 0.08);
-      transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+      transition: transform 0.18s ease,
+                  box-shadow 0.18s ease,
+                  border-color 0.18s ease;
     }
 
     .article:hover {
@@ -130,7 +173,8 @@
       border-radius: 999px;
       font-weight: 700;
       font-size: 0.92rem;
-      transition: background 0.18s ease, transform 0.18s ease;
+      transition: background 0.18s ease,
+                  transform 0.18s ease;
     }
 
     .button:hover {
@@ -162,98 +206,213 @@
         width: 100%;
         text-align: center;
       }
+
+      .cover-tilted {
+        width: 95px;
+      }
+
+      .header-extras {
+        gap: 18px;
+      }
     }
   </style>
 </head>
+
 <body>
   <main class="page">
+
     <header>
-      <div class="label">Special issue</div>
+      <div class="label">
+        Special issue
+      </div>
+
       <h1>SupBiotech Projects Journal</h1>
-      <div class="meta">Volume 1 · January 2018</div>
+
+      <div class="meta">
+        Volume 1 · January 2018
+      </div>
+
+      <div class="header-extras">
+        <a class="home-button"
+           href="https://supbiotech-projects.github.io/"
+           target="_blank"
+           rel="noopener">
+          ← Back to Journal Website
+        </a>
+
+        <img
+          class="cover-tilted"
+          src="https://supbiotech-projects.github.io/SBPJ_vols/Vol1/cover1-jan18.png"
+          alt="Volume 1 Cover"
+        />
+      </div>
     </header>
 
     <section class="intro">
-      <strong>Table of contents.</strong> Each article links directly to its starting page in the PDF version of Volume 1.
+      <strong>Table of contents.</strong>
+      Each article links directly to its starting page in the PDF version of Volume 1.
     </section>
 
     <section class="toc" aria-label="Table of contents">
+
       <article class="article">
         <div class="page-num">p. 4</div>
         <div class="content">
-          <h2>Development of a nutritive solution for eco-sourced hydroponic farming: identification and characterisation of the main microorganisms present in compost</h2>
-          <p class="authors">Sophie Cheverry, Nicolas Delettre, Julie Henry, Xuly Labarrere</p>
+          <h2>
+            Development of a nutritive solution for eco-sourced hydroponic farming: identification and characterisation of the main microorganisms present in compost
+          </h2>
+          <p class="authors">
+            Sophie Cheverry, Nicolas Delettre, Julie Henry,
+            Xuly Labarrere
+          </p>
         </div>
-        <a class="button" href="https://supbiotech-projects.github.io/SBPJ_vols/Vol1/SBPJVOL1.pdf#page=4" target="_blank" rel="noopener">Open article</a>
+        <a class="button"
+           href="https://supbiotech-projects.github.io/SBPJ_vols/Vol1/SBPJVOL1.pdf#page=4"
+           target="_blank"
+           rel="noopener">
+          Open article
+        </a>
       </article>
 
       <article class="article">
         <div class="page-num">p. 15</div>
         <div class="content">
-          <h2>Detection of GMOs in food products using PCR</h2>
-          <p class="authors">Alexia Asch, Romain Darriaut, Maely Daviles, Juliette Hatton, Pierre-Jean Morin, Nadege Silvera</p>
+          <h2>
+            Detection of GMOs in food products using PCR
+          </h2>
+          <p class="authors">
+            Alexia Asch, Romain Darriaut, Maely Daviles,
+            Juliette Hatton, Pierre-Jean Morin, Nadege Silvera
+          </p>
         </div>
-        <a class="button" href="https://supbiotech-projects.github.io/SBPJ_vols/Vol1/SBPJVOL1.pdf#page=15" target="_blank" rel="noopener">Open article</a>
+        <a class="button"
+           href="https://supbiotech-projects.github.io/SBPJ_vols/Vol1/SBPJVOL1.pdf#page=15"
+           target="_blank"
+           rel="noopener">
+          Open article
+        </a>
       </article>
 
       <article class="article">
         <div class="page-num">p. 23</div>
         <div class="content">
-          <h2>Toxicity assessment on HeLa and HEK 293 cells after treatment with Acetaminophen and 5-fluorouracil</h2>
-          <p class="authors">Antoine Arvor, Jean Brerault, Eliott Lafon, Thomas Lhernould, Maxime Sportich, Gabrielle Vuillaume</p>
+          <h2>
+            Toxicity assessment on HeLa and HEK 293 cells after treatment with Acetaminophen and 5-fluorouracil
+          </h2>
+          <p class="authors">
+            Antoine Arvor, Jean Brerault, Eliott Lafon,
+            Thomas Lhernould, Maxime Sportich, Gabrielle Vuillaume
+          </p>
         </div>
-        <a class="button" href="https://supbiotech-projects.github.io/SBPJ_vols/Vol1/SBPJVOL1.pdf#page=23" target="_blank" rel="noopener">Open article</a>
+        <a class="button"
+           href="https://supbiotech-projects.github.io/SBPJ_vols/Vol1/SBPJVOL1.pdf#page=23"
+           target="_blank"
+           rel="noopener">
+          Open article
+        </a>
       </article>
 
       <article class="article">
         <div class="page-num">p. 31</div>
         <div class="content">
-          <h2>Quantify the Cas9 level of expression after transfection in human cells</h2>
-          <p class="authors">Chloé Blondel, Capucine de Tricornot, Jędrzej Dobrogojski, Johanna Hirel, Julie Lefrançois, Agathe Lermant, Yanis Merabet</p>
+          <h2>
+            Quantify the Cas9 level of expression after transfection in human cells
+          </h2>
+          <p class="authors">
+            Chloé Blondel, Capucine de Tricornot,
+            Jędrzej Dobrogojski, Johanna Hirel,
+            Julie Lefrançois, Agathe Lermant, Yanis Merabet
+          </p>
         </div>
-        <a class="button" href="https://supbiotech-projects.github.io/SBPJ_vols/Vol1/SBPJVOL1.pdf#page=31" target="_blank" rel="noopener">Open article</a>
+        <a class="button"
+           href="https://supbiotech-projects.github.io/SBPJ_vols/Vol1/SBPJVOL1.pdf#page=31"
+           target="_blank"
+           rel="noopener">
+          Open article
+        </a>
       </article>
 
       <article class="article">
         <div class="page-num">p. 44</div>
         <div class="content">
-          <h2>Identification of active targets in bioassays of Ivermectin similar compounds</h2>
-          <p class="authors">Sacha Levy, Arthur Moreau, Anaïs Nguyen-Goument, Nicolas Tonneau</p>
+          <h2>
+            Identification of active targets in bioassays of Ivermectin similar compounds
+          </h2>
+          <p class="authors">
+            Sacha Levy, Arthur Moreau, Anaïs Nguyen-Goument,
+            Nicolas Tonneau
+          </p>
         </div>
-        <a class="button" href="https://supbiotech-projects.github.io/SBPJ_vols/Vol1/SBPJVOL1.pdf#page=44" target="_blank" rel="noopener">Open article</a>
+        <a class="button"
+           href="https://supbiotech-projects.github.io/SBPJ_vols/Vol1/SBPJVOL1.pdf#page=44"
+           target="_blank"
+           rel="noopener">
+          Open article
+        </a>
       </article>
 
       <article class="article">
         <div class="page-num">p. 51</div>
         <div class="content">
-          <h2>Production and purification of a His-tagged PEP2 protein in Pichia pastoris</h2>
-          <p class="authors">Jules Heraud, Axel Philip, Pierre Sarrot, Ruxandra Toderasc</p>
+          <h2>
+            Production and purification of a His-tagged PEP2 protein in Pichia pastoris
+          </h2>
+          <p class="authors">
+            Jules Heraud, Axel Philip, Pierre Sarrot,
+            Ruxandra Toderasc
+          </p>
         </div>
-        <a class="button" href="https://supbiotech-projects.github.io/SBPJ_vols/Vol1/SBPJVOL1.pdf#page=51" target="_blank" rel="noopener">Open article</a>
+        <a class="button"
+           href="https://supbiotech-projects.github.io/SBPJ_vols/Vol1/SBPJVOL1.pdf#page=51"
+           target="_blank"
+           rel="noopener">
+          Open article
+        </a>
       </article>
 
       <article class="article">
         <div class="page-num">p. 55</div>
         <div class="content">
-          <h2>Development of a thermo-responsive plasmid for cold and hot temperature protein expression</h2>
-          <p class="authors">Gaétan Christien, Maryne Follenfant, Marie Lhuissier, Paul Lubrano, Alicia Magnanon</p>
+          <h2>
+            Development of a thermo-responsive plasmid for cold and hot temperature protein expression
+          </h2>
+          <p class="authors">
+            Gaétan Christien, Maryne Follenfant,
+            Marie Lhuissier, Paul Lubrano, Alicia Magnanon
+          </p>
         </div>
-        <a class="button" href="https://supbiotech-projects.github.io/SBPJ_vols/Vol1/SBPJVOL1.pdf#page=55" target="_blank" rel="noopener">Open article</a>
+        <a class="button"
+           href="https://supbiotech-projects.github.io/SBPJ_vols/Vol1/SBPJVOL1.pdf#page=55"
+           target="_blank"
+           rel="noopener">
+          Open article
+        </a>
       </article>
 
       <article class="article">
         <div class="page-num">p. 65</div>
         <div class="content">
-          <h2>Prevention of biofilm formation using structural improvement of surfaces in industrial conditions</h2>
-          <p class="authors">Quentin Bernard, Pierre Tourame, Paul Caroen</p>
+          <h2>
+            Prevention of biofilm formation using structural improvement of surfaces in industrial conditions
+          </h2>
+          <p class="authors">
+            Quentin Bernard, Pierre Tourame, Paul Caroen
+          </p>
         </div>
-        <a class="button" href="https://supbiotech-projects.github.io/SBPJ_vols/Vol1/SBPJVOL1.pdf#page=65" target="_blank" rel="noopener">Open article</a>
+        <a class="button"
+           href="https://supbiotech-projects.github.io/SBPJ_vols/Vol1/SBPJVOL1.pdf#page=65"
+           target="_blank"
+           rel="noopener">
+          Open article
+        </a>
       </article>
+
     </section>
 
     <footer>
       SupBiotech Projects Journal · Volume 1 · January 2018
     </footer>
+
   </main>
 </body>
 </html>
