@@ -17,17 +17,12 @@ export const Route = createFileRoute("/")({
           "Official site of the SupBiotech Projects Journal: undergraduate research, reviews, and project reports from SupBiotech students.",
       },
       { property: "og:title", content: SITE_CONFIG.title },
-      {
-        property: "og:description",
-        content: SITE_CONFIG.tagline,
-      },
+      { property: "og:description", content: SITE_CONFIG.tagline },
       { property: "og:type", content: "website" },
     ],
   }),
   component: Index,
 });
-
-const MIN_VOLUMES = 3;
 
 function useReveal<T extends HTMLElement>() {
   const ref = useRef<T | null>(null);
@@ -79,9 +74,7 @@ function VolumeCard({ volume, index }: { volume: Volume; index: number }) {
           <div className="flex h-full w-full flex-col items-center justify-center gap-3 bg-gradient-hero text-primary-foreground">
             <BookOpen className="h-10 w-10 opacity-80" aria-hidden />
             <div className="text-center">
-              <div className="text-xs uppercase tracking-widest opacity-70">
-                Volume
-              </div>
+              <div className="text-xs uppercase tracking-widest opacity-70">Volume</div>
               <div className="text-3xl font-bold">{volume.volume}</div>
               <div className="mt-2 text-xs opacity-70">Coming soon</div>
             </div>
@@ -156,29 +149,7 @@ function Index() {
     };
   }, []);
 
-const display: Volume[] = volumes;
-
-    for (let n = 1; n <= max; n++) {
-      list.push(
-        byNumber.get(n) ?? {
-          number: n,
-          date: "",
-          coverUrl: "",
-          contentsUrl: "",
-          pdfUrl: "",
-        },
-      );
-    }
-
-    if (volumes.length > 0) {
-      return [
-        ...volumes,
-        ...list.filter((l) => !volumes.find((v) => v.number === l.number)),
-      ];
-    }
-
-    return list;
-  })();
+  const display: Volume[] = volumes;
 
   return (
     <main className="min-h-screen bg-background">
