@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>SupBiotech Projects Journal — Volume 8</title>
+
   <style>
     :root {
       --card: #ffffff;
@@ -60,6 +61,46 @@
       opacity: 0.92;
     }
 
+    .header-extras {
+      margin-top: 28px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 34px;
+      flex-wrap: wrap;
+    }
+
+    .home-button {
+      display: inline-block;
+      text-decoration: none;
+      color: white;
+      background: rgba(255,255,255,0.14);
+      border: 1px solid rgba(255,255,255,0.22);
+      padding: 12px 18px;
+      border-radius: 999px;
+      font-weight: 700;
+      backdrop-filter: blur(6px);
+      transition: all 0.18s ease;
+    }
+
+    .home-button:hover {
+      background: rgba(255,255,255,0.22);
+      transform: translateY(-2px);
+    }
+
+    .cover-tilted {
+      width: 130px;
+      border-radius: 14px;
+      transform: rotate(-8deg);
+      box-shadow: 0 18px 35px rgba(0,0,0,0.28);
+      border: 4px solid rgba(255,255,255,0.9);
+      transition: transform 0.2s ease;
+    }
+
+    .cover-tilted:hover {
+      transform: rotate(-4deg) scale(1.03);
+    }
+
     .intro {
       background: rgba(255, 255, 255, 0.78);
       border: 1px solid var(--line);
@@ -69,7 +110,10 @@
       color: var(--muted);
     }
 
-    .toc { display: grid; gap: 18px; }
+    .toc {
+      display: grid;
+      gap: 18px;
+    }
 
     .article {
       display: grid;
@@ -81,7 +125,9 @@
       border-radius: 22px;
       padding: 20px;
       box-shadow: 0 10px 28px rgba(47, 39, 35, 0.08);
-      transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+      transition: transform 0.18s ease,
+                  box-shadow 0.18s ease,
+                  border-color 0.18s ease;
     }
 
     .article:hover {
@@ -125,7 +171,8 @@
       border-radius: 999px;
       font-weight: 700;
       font-size: 0.92rem;
-      transition: background 0.18s ease, transform 0.18s ease;
+      transition: background 0.18s ease,
+                  transform 0.18s ease;
     }
 
     .button:hover {
@@ -141,89 +188,226 @@
     }
 
     @media (max-width: 760px) {
-      .article { grid-template-columns: 1fr; gap: 14px; }
+
+      .article {
+        grid-template-columns: 1fr;
+        gap: 14px;
+      }
+
       .page-num {
         width: fit-content;
         min-width: 68px;
         height: 42px;
         border-radius: 999px;
       }
-      .button { width: 100%; text-align: center; }
+
+      .button {
+        width: 100%;
+        text-align: center;
+      }
+
+      .cover-tilted {
+        width: 95px;
+      }
+
+      .header-extras {
+        gap: 18px;
+      }
     }
   </style>
 </head>
+
 <body>
+
   <main class="page">
+
     <header>
-      <div class="label">Applied Transversal Projects Program · Fil Rouge</div>
+
+      <div class="label">
+        Applied Transversal Projects Program · Fil Rouge
+      </div>
+
       <h1>SupBiotech Projects Journal</h1>
-      <div class="meta">Volume 8 · February 2025</div>
+
+      <div class="meta">
+        Volume 8 · February 2025
+      </div>
+
+      <div class="header-extras">
+
+        <a class="home-button"
+           href="https://supbiotech-projects.github.io/"
+           target="_blank"
+           rel="noopener">
+          ← Back to Journal Website
+        </a>
+
+        <img
+          class="cover-tilted"
+          src="https://supbiotech-projects.github.io/SBPJ_vols/Vol8/cover8-feb25.png"
+          alt="Volume 8 Cover"
+        />
+
+      </div>
+
     </header>
 
     <section class="intro">
-      <strong>Contents.</strong> Each article links directly to its starting page in the PDF version of Volume 8.
+      <strong>Contents.</strong>
+      Each article links directly to its starting page in the PDF version of Volume 8.
     </section>
 
     <section class="toc" aria-label="Contents">
+
       <article class="article">
         <div class="page-num">p. 3</div>
+
         <div class="content">
-          <h2>Evaluating the specificity and efficacy of purified VHH antibody fragment targeting GFAP in astrocytes and brain organoids</h2>
-          <p class="authors">Léna Christ, Caitline Guilloux, Elodie Noël, Maïlys Portier, Camille Ropert, Chloé Roudier, Julie Vaiani, Joséphine Poiret</p>
+          <h2>
+            Evaluating the specificity and efficacy of purified VHH antibody fragment targeting GFAP in astrocytes and brain organoids
+          </h2>
+
+          <p class="authors">
+            Léna Christ, Caitline Guilloux, Elodie Noël,
+            Maïlys Portier, Camille Ropert, Chloé Roudier,
+            Julie Vaiani, Joséphine Poiret
+          </p>
         </div>
-        <a class="button" href="https://supbiotech-projects.github.io/SBPJ_vols/Vol8/SBPJVOL8_compressed.pdf#page=4" target="_blank" rel="noopener">Open article</a>
+
+        <a class="button"
+           href="https://supbiotech-projects.github.io/SBPJ_vols/Vol8/SBPJVOL8_compressed.pdf#page=4"
+           target="_blank"
+           rel="noopener">
+          Open article
+        </a>
       </article>
 
       <article class="article">
         <div class="page-num">p. 13</div>
+
         <div class="content">
-          <h2>Improved bioproduction of prodigiosin by Serratia marcescens using peanut powder via a low-cost process</h2>
-          <p class="authors">Heloise Bauer, Jade Foret, Marina Gayat, Rémy Hubert, Alyssia Kassa, Tiffany Leroy, Lea Massard, Benjamin Toustou</p>
+          <h2>
+            Improved bioproduction of prodigiosin by Serratia marcescens using peanut powder via a low-cost process
+          </h2>
+
+          <p class="authors">
+            Heloise Bauer, Jade Foret, Marina Gayat,
+            Rémy Hubert, Alyssia Kassa, Tiffany Leroy,
+            Lea Massard, Benjamin Toustou
+          </p>
         </div>
-        <a class="button" href="https://supbiotech-projects.github.io/SBPJ_vols/Vol8/SBPJVOL8_compressed.pdf#page=14" target="_blank" rel="noopener">Open article</a>
+
+        <a class="button"
+           href="https://supbiotech-projects.github.io/SBPJ_vols/Vol8/SBPJVOL8_compressed.pdf#page=14"
+           target="_blank"
+           rel="noopener">
+          Open article
+        </a>
       </article>
 
       <article class="article">
         <div class="page-num">p. 26</div>
+
         <div class="content">
-          <h2>Design of a mycelium-based insulating biomaterial: a sustainable and more efficient insulation</h2>
-          <p class="authors">Valentine Capillon, Jade Coullomb, Pauline Garon, Antoine Goncalves, Florian Marette, Coralie Menuisier, Mathis Turpin</p>
+          <h2>
+            Design of a mycelium-based insulating biomaterial: a sustainable and more efficient insulation
+          </h2>
+
+          <p class="authors">
+            Valentine Capillon, Jade Coullomb,
+            Pauline Garon, Antoine Goncalves,
+            Florian Marette, Coralie Menuisier,
+            Mathis Turpin
+          </p>
         </div>
-        <a class="button" href="https://supbiotech-projects.github.io/SBPJ_vols/Vol8/SBPJVOL8_compressed.pdf#page=27" target="_blank" rel="noopener">Open article</a>
+
+        <a class="button"
+           href="https://supbiotech-projects.github.io/SBPJ_vols/Vol8/SBPJVOL8_compressed.pdf#page=27"
+           target="_blank"
+           rel="noopener">
+          Open article
+        </a>
       </article>
 
       <article class="article">
         <div class="page-num">p. 32</div>
+
         <div class="content">
-          <h2>Combating resistant bacteria: exploring the synergy of essential oils and antibiotics</h2>
-          <p class="authors">Antoine Bonnet, Orane Calvo de Olmos, Ines Darik, Ceren Karataban, Clarisse Lemattre, Meriem Mohraz, Anaëlle Vigne-Haddad</p>
+          <h2>
+            Combating resistant bacteria: exploring the synergy of essential oils and antibiotics
+          </h2>
+
+          <p class="authors">
+            Antoine Bonnet, Orane Calvo de Olmos,
+            Ines Darik, Ceren Karataban,
+            Clarisse Lemattre, Meriem Mohraz,
+            Anaëlle Vigne-Haddad
+          </p>
         </div>
-        <a class="button" href="https://supbiotech-projects.github.io/SBPJ_vols/Vol8/SBPJVOL8_compressed.pdf#page=33" target="_blank" rel="noopener">Open article</a>
+
+        <a class="button"
+           href="https://supbiotech-projects.github.io/SBPJ_vols/Vol8/SBPJVOL8_compressed.pdf#page=33"
+           target="_blank"
+           rel="noopener">
+          Open article
+        </a>
       </article>
 
       <article class="article">
         <div class="page-num">p. 41</div>
+
         <div class="content">
-          <h2>Evaluating essential oils as alternative antifungal agents: potential against candidiasis</h2>
-          <p class="authors">Noémie Forissier, Ouday Hamidi, Baudouin Klein, Armen Okhkian, Arunaan Raguleswaran, Harena Rasolondraibe, Joachim Schertz</p>
+          <h2>
+            Evaluating essential oils as alternative antifungal agents: potential against candidiasis
+          </h2>
+
+          <p class="authors">
+            Noémie Forissier, Ouday Hamidi,
+            Baudouin Klein, Armen Okhkian,
+            Arunaan Raguleswaran, Harena Rasolondraibe,
+            Joachim Schertz
+          </p>
         </div>
-        <a class="button" href="https://supbiotech-projects.github.io/SBPJ_vols/Vol8/SBPJVOL8_compressed.pdf#page=42" target="_blank" rel="noopener">Open article</a>
+
+        <a class="button"
+           href="https://supbiotech-projects.github.io/SBPJ_vols/Vol8/SBPJVOL8_compressed.pdf#page=42"
+           target="_blank"
+           rel="noopener">
+          Open article
+        </a>
       </article>
 
       <article class="article">
         <div class="page-num">p. 49</div>
+
         <div class="content">
-          <h2>Highlighting the therapeutic potential of thymol essential oil against Aspergillosis, a fungal respiratory disease</h2>
-          <p class="authors">Marie Darrigade, Marie Gallian, Sarah Kolb, Charline Roberge, Manon Soares, Victoire Streicher, Eva Trinh Thai</p>
+          <h2>
+            Highlighting the therapeutic potential of thymol essential oil against Aspergillosis, a fungal respiratory disease
+          </h2>
+
+          <p class="authors">
+            Marie Darrigade, Marie Gallian,
+            Sarah Kolb, Charline Roberge,
+            Manon Soares, Victoire Streicher,
+            Eva Trinh Thai
+          </p>
         </div>
-        <a class="button" href="https://supbiotech-projects.github.io/SBPJ_vols/Vol8/SBPJVOL8_compressed.pdf#page=50" target="_blank" rel="noopener">Open article</a>
+
+        <a class="button"
+           href="https://supbiotech-projects.github.io/SBPJ_vols/Vol8/SBPJVOL8_compressed.pdf#page=50"
+           target="_blank"
+           rel="noopener">
+          Open article
+        </a>
       </article>
+
     </section>
 
     <footer>
       SupBiotech Projects Journal · Volume 8 · February 2025
     </footer>
+
   </main>
+
 </body>
 </html>
-
