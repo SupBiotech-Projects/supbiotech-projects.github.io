@@ -164,7 +164,7 @@ function Index() {
   return (
     <main className="min-h-screen bg-background">
       <header className="sticky top-0 z-50 border-b border-border/60 bg-background/80 backdrop-blur-md supports-[backdrop-filter]:bg-background/70">
-        <div className="mx-auto flex h-16 max-w-6xl items-center justify-between gap-4 px-6">
+        <div className="mx-auto grid h-16 max-w-7xl grid-cols-3 items-center gap-4 px-6">
           <a
             href="#top"
             className="flex items-center gap-3"
@@ -178,50 +178,67 @@ function Index() {
               className="h-12 w-auto object-contain"
             />
 
-            <span className="hidden text-sm font-semibold tracking-tight text-foreground sm:inline">
+            <span className="hidden text-sm font-semibold tracking-tight text-foreground lg:inline">
               SupBiotech Projects Journal
             </span>
           </a>
 
-<div className="flex items-center gap-3">
-  <a
-    href="https://supbiotech-projects.github.io/student-info.html"
-    className="hidden items-center gap-2 rounded-full border border-border bg-background px-4 py-2 text-sm font-medium text-foreground shadow-sm transition hover:bg-accent hover:text-accent-foreground lg:flex"
-  >
-    <GraduationCap className="h-4 w-4" />
-    Student Research Space
-  </a>
+          <a
+            href="https://www.supbiotech.fr/"
+            target="_blank"
+            rel="noreferrer noopener"
+            className="flex justify-center"
+            aria-label="SupBiotech website"
+          >
+            <img
+              src={supbiotechLogo}
+              alt="SupBiotech logo"
+              width={120}
+              height={40}
+              className="h-10 w-auto object-contain transition-opacity hover:opacity-80"
+            />
+          </a>
 
-  <img
-    src={supbiotechLogo}
-    alt="SupBiotech logo"
-    width={120}
-    height={32}
-    className="hidden h-8 w-auto object-contain sm:block"
-  />
+          <div className="flex items-center justify-end gap-3">
+            <Button
+              asChild
+              size="sm"
+              className="bg-cyan-500 text-white shadow-sm hover:bg-cyan-400"
+            >
+              <a
+                href="https://supbiotech-projects.github.io/student-info.html"
+                target="_blank"
+                rel="noreferrer noopener"
+              >
+                <GraduationCap className="h-4 w-4 sm:mr-2" />
+                <span className="hidden xl:inline">Student Research Space</span>
+              </a>
+            </Button>
 
-  <Button asChild size="sm" variant="outline">
-    <a
-      href="https://supbiotech-projects.github.io/contents"
-      aria-label="Search contents"
-    >
-      <Search className="h-4 w-4 sm:mr-2" />
-      <span className="hidden sm:inline">Search</span>
-    </a>
-  </Button>
+            <Button asChild size="sm" variant="outline">
+              <a
+                href={SITE_CONFIG.githubUrl}
+                target="_blank"
+                rel="noreferrer noopener"
+                aria-label="GitHub repositories"
+              >
+                <Github className="h-4 w-4 sm:mr-2" />
+                <span className="hidden sm:inline">GitHub</span>
+              </a>
+            </Button>
 
-  <Button asChild size="sm" variant="outline">
-    <a
-      href={SITE_CONFIG.githubUrl}
-      target="_blank"
-      rel="noreferrer noopener"
-      aria-label="GitHub repositories"
-    >
-      <Github className="h-4 w-4 sm:mr-2" />
-      <span className="hidden sm:inline">GitHub</span>
-    </a>
-  </Button>
-</div>
+            <Button asChild size="sm" variant="outline">
+              <a
+                href="https://supbiotech-projects.github.io/contents"
+                target="_blank"
+                rel="noreferrer noopener"
+                aria-label="Search archive"
+              >
+                <Search className="h-4 w-4 sm:mr-2" />
+                <span className="hidden sm:inline">Search Archive</span>
+              </a>
+            </Button>
+          </div>
         </div>
       </header>
 
@@ -288,7 +305,7 @@ function Index() {
               <div className="relative rotate-6 transition-transform duration-500 hover:rotate-3">
                 <img
                   src={latestVolume.coverUrl}
-                  alt={`Latest volume cover`}
+                  alt="Latest volume cover"
                   className="h-[420px] w-auto rounded-2xl border border-white/10 bg-black object-contain shadow-2xl"
                 />
 
@@ -336,11 +353,27 @@ function Index() {
             </h2>
           </div>
 
-          <p className="text-sm text-muted-foreground">
-            {loaded
-              ? `${volumes.length} published · ${display.length} shown`
-              : "Loading…"}
-          </p>
+          <div className="text-sm text-muted-foreground">
+            {loaded ? (
+              <div className="flex flex-wrap items-center gap-4">
+                <span>
+                  {volumes.length} published · {display.length} shown
+                </span>
+
+                <a
+                  href="https://supbiotech-projects.github.io/contents"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  className="inline-flex items-center gap-1 font-medium text-primary hover:underline"
+                >
+                  <Search className="h-4 w-4" />
+                  Search archive
+                </a>
+              </div>
+            ) : (
+              "Loading…"
+            )}
+          </div>
         </div>
 
         <div className="grid grid-cols-2 gap-5 sm:grid-cols-3 lg:grid-cols-4">
