@@ -1,6 +1,13 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useRef, useState } from "react";
-import { Github, BookOpen, ExternalLink, FileText } from "lucide-react";
+import {
+  Github,
+  BookOpen,
+  ExternalLink,
+  FileText,
+  Search,
+  GraduationCap,
+} from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { parseSitemap, type Volume } from "@/lib/parseSitemap";
 import { SITE_CONFIG } from "@/lib/siteConfig";
@@ -176,27 +183,45 @@ function Index() {
             </span>
           </a>
 
-          <div className="flex items-center gap-4">
-            <img
-              src={supbiotechLogo}
-              alt="SupBiotech logo"
-              width={120}
-              height={32}
-              className="hidden h-8 w-auto object-contain sm:block"
-            />
+<div className="flex items-center gap-3">
+  <a
+    href="https://supbiotech-projects.github.io/student-info.html"
+    className="hidden items-center gap-2 rounded-full border border-border bg-background px-4 py-2 text-sm font-medium text-foreground shadow-sm transition hover:bg-accent hover:text-accent-foreground lg:flex"
+  >
+    <GraduationCap className="h-4 w-4" />
+    Student Research Space
+  </a>
 
-            <Button asChild size="sm" variant="outline">
-              <a
-                href={SITE_CONFIG.githubUrl}
-                target="_blank"
-                rel="noreferrer noopener"
-                aria-label="GitHub repositories"
-              >
-                <Github className="h-4 w-4 sm:mr-2" />
-                <span className="hidden sm:inline">GitHub</span>
-              </a>
-            </Button>
-          </div>
+  <img
+    src={supbiotechLogo}
+    alt="SupBiotech logo"
+    width={120}
+    height={32}
+    className="hidden h-8 w-auto object-contain sm:block"
+  />
+
+  <Button asChild size="sm" variant="outline">
+    <a
+      href="https://supbiotech-projects.github.io/contents"
+      aria-label="Search contents"
+    >
+      <Search className="h-4 w-4 sm:mr-2" />
+      <span className="hidden sm:inline">Search</span>
+    </a>
+  </Button>
+
+  <Button asChild size="sm" variant="outline">
+    <a
+      href={SITE_CONFIG.githubUrl}
+      target="_blank"
+      rel="noreferrer noopener"
+      aria-label="GitHub repositories"
+    >
+      <Github className="h-4 w-4 sm:mr-2" />
+      <span className="hidden sm:inline">GitHub</span>
+    </a>
+  </Button>
+</div>
         </div>
       </header>
 
