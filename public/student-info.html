@@ -52,8 +52,6 @@
       display: flex;
       align-items: center;
       gap: 12px;
-      flex-wrap: wrap;
-      justify-content: flex-end;
     }
 
     .back-link {
@@ -62,11 +60,6 @@
       font-size: 0.9rem;
       font-weight: bold;
       opacity: 0.9;
-    }
-
-    .back-link:hover {
-      opacity: 1;
-      text-decoration: underline;
     }
 
     .lang-toggle {
@@ -118,25 +111,12 @@
       padding: 16px 26px;
       border-radius: 999px;
       box-shadow: 0 14px 35px rgba(0,200,83,.35);
-      margin-bottom: 0;
       font-weight: bold;
-      letter-spacing: .2px;
-    }
-
-    .access-bar::before {
-      content: "✓";
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 26px;
-      height: 26px;
-      border-radius: 50%;
-      background: rgba(255,255,255,.2);
     }
 
     .section-title {
       font-size: 2rem;
-      margin: 20px 0 24px;
+      margin: 30px 0 24px;
     }
 
     .grid {
@@ -149,32 +129,27 @@
       position: relative;
       display: block;
       background: var(--white);
-      padding: 24px;
-      padding-top: 68px;
+      padding: 28px;
+      padding-top: 72px;
       border-radius: var(--radius);
       box-shadow: var(--shadow);
       text-decoration: none;
       color: inherit;
-      transition: transform .2s ease, box-shadow .2s ease;
-      min-height: 210px;
-      overflow: hidden;
+      min-height: 235px;
     }
 
     .card:hover {
       transform: translateY(-6px);
-      box-shadow: 0 24px 60px rgba(0,0,0,.16);
     }
 
     .card-img {
       position: absolute;
-      top: 20px;
-      right: 20px;
-      width: 56px;
-      height: 56px;
-      border-radius: 16px;
+      top: 22px;
+      right: 22px;
+      width: 58px;
+      height: 58px;
+      border-radius: 18px;
       object-fit: cover;
-      background: #dff5f3;
-      box-shadow: 0 8px 20px rgba(0,0,0,.12);
     }
 
     .tag {
@@ -188,28 +163,13 @@
       margin-bottom: 18px;
     }
 
-    .card h2 {
-      margin: 0 0 12px;
-      font-size: 1.45rem;
-      color: var(--teal);
-      max-width: 80%;
-    }
-
-    .card p {
-      margin: 0;
-      color: var(--muted);
-      font-size: 1rem;
-      line-height: 1.55;
-    }
-
     footer {
       padding: 40px 8%;
-      color: var(--muted);
       text-align: center;
+      color: var(--muted);
     }
 
     [data-lang="fr"] { display: none; }
-
     body.fr [data-lang="en"] { display: none; }
     body.fr [data-lang="fr"] { display: revert; }
   </style>
@@ -219,7 +179,7 @@
 
 <header>
   <div class="topbar">
-    <img class="logo" src="assets/supbiotech-logo.png" alt="SupBiotech logo">
+    <img class="logo" src="assets/supbiotech-logo.png">
 
     <div class="header-actions">
       <a class="back-link" href="https://recherche.supbiotech.fr" target="_blank">
@@ -228,8 +188,8 @@
       </a>
 
       <div class="lang-toggle">
-        <button class="lang-btn active" type="button" data-set-lang="en">EN</button>
-        <button class="lang-btn" type="button" data-set-lang="fr">FR</button>
+        <button class="lang-btn active" data-set-lang="en">EN</button>
+        <button class="lang-btn" data-set-lang="fr">FR</button>
       </div>
     </div>
   </div>
@@ -238,37 +198,138 @@
   <h1 data-lang="fr">Espace étudiants</h1>
 
   <p data-lang="en">Research and lab tools for SupBiotech students: publications, scientific tools, student projects, jobs, news and English resources for science.</p>
-  <p data-lang="fr">Outils de recherche et de laboratoire pour les étudiants de SupBiotech : publications, outils scientifiques, projets étudiants, emplois, actualités et ressources d’anglais scientifique.</p>
+  <p data-lang="fr">Outils de recherche et de laboratoire pour les étudiants de SupBiotech.</p>
 </header>
 
 <main>
 
-  <div class="access-bar">
-    <span data-lang="en">Reserved for SupBiotech students</span>
-    <span data-lang="fr">Réservé aux étudiants de SupBiotech</span>
-  </div>
+<div class="access-bar">
+<span data-lang="en">Reserved for SupBiotech students</span>
+<span data-lang="fr">Réservé aux étudiants de SupBiotech</span>
+</div>
 
-  <!-- rest unchanged -->
+<h2 class="section-title" data-lang="en">Research and Lab Tools</h2>
+<h2 class="section-title" data-lang="fr">Recherche et outils de laboratoire</h2>
+
+<section class="grid">
+
+<a class="card" href="https://supbiotechfr.sharepoint.com" target="_blank">
+<img class="card-img" src="assets/pub.png">
+<span class="tag">Publications</span>
+<h2 data-lang="en">Access to publications</h2>
+<h2 data-lang="fr">Accès aux publications</h2>
+<p data-lang="en">Access paid scientific journals and useful scientific resources.</p>
+<p data-lang="fr">Accédez aux revues scientifiques payantes et à des ressources utiles.</p>
+</a>
+
+<a class="card" href="assets/scill.pdf" target="_blank">
+<img class="card-img" src="assets/graph.png">
+<span class="tag">Figures</span>
+<h2 data-lang="en">Making scientific illustrations</h2>
+<h2 data-lang="fr">Créer des illustrations scientifiques</h2>
+<p data-lang="en">Tools to create scientific illustrations, diagrams and graphical abstracts.</p>
+<p data-lang="fr">Outils pour créer des illustrations scientifiques, schémas et graphical abstracts.</p>
+</a>
+
+<a class="card" href="assets/work.pdf" target="_blank">
+<img class="card-img" src="assets/toolbox.png">
+<span class="tag">Science tools</span>
+<h2 data-lang="en">The tools you need to work in science</h2>
+<h2 data-lang="fr">Les outils nécessaires pour travailler en science</h2>
+<p data-lang="en">Essential tools for research, biotechnology and laboratory work.</p>
+<p data-lang="fr">Outils essentiels pour la recherche, les biotechnologies et le laboratoire.</p>
+</a>
+
+<a class="card" href="https://editor.p5js.org/frank.yates/full/OV6pjS93o" target="_blank">
+<img class="card-img" src="assets/count.png">
+<span class="tag">Practice</span>
+<h2 data-lang="en">Practice counting cells on a Malassez chamber</h2>
+<h2 data-lang="fr">S’entraîner à compter des cellules sur Malassez</h2>
+<p data-lang="en">Interactive exercise to practice cell counting.</p>
+<p data-lang="fr">Exercice interactif pour s’entraîner au comptage cellulaire.</p>
+</a>
+
+</section>
+
+<h2 class="section-title" data-lang="en">Student Journal and References</h2>
+<h2 class="section-title" data-lang="fr">Journal étudiant et références</h2>
+
+<section class="grid">
+
+<a class="card" href="https://supbiotech-projects.github.io/" target="_blank">
+<img class="card-img" src="assets/sbpj.png">
+<span class="tag">Student journal</span>
+<h2>SupBiotech Projects</h2>
+<p data-lang="en">The journal of SupBiotech students.</p>
+<p data-lang="fr">Le journal des étudiants de SupBiotech.</p>
+</a>
+
+<a class="card" href="https://www.youtube.com/watch?v=LVsI7kaIwFc" target="_blank">
+<img class="card-img" src="assets/zoteros.png">
+<span class="tag">Bibliography</span>
+<h2 data-lang="en">Zotero tutorial</h2>
+<h2 data-lang="fr">Tutoriel Zotero</h2>
+<p data-lang="en">Learn how to manage bibliographical references with Zotero.</p>
+<p data-lang="fr">Apprenez à gérer vos références bibliographiques avec Zotero.</p>
+</a>
+
+<a class="card" href="https://frankyates6.wixsite.com/sbrecherche/englishscience" target="_blank">
+<img class="card-img" src="assets/english.png">
+<span class="tag">English</span>
+<h2 data-lang="en">Using English in science</h2>
+<h2 data-lang="fr">Utiliser l’anglais en science</h2>
+<p data-lang="en">Exercises, podcasts, videos and scientific English resources.</p>
+<p data-lang="fr">Exercices, podcasts, vidéos et ressources d’anglais scientifique.</p>
+</a>
+
+</section>
+
+<h2 class="section-title" data-lang="en">News and Jobs</h2>
+<h2 class="section-title" data-lang="fr">Actualités et emplois</h2>
+
+<section class="grid">
+
+<a class="card" href="https://www.linkedin.com/company/research-labs-sup-biotech" target="_blank">
+<img class="card-img" src="assets/club.png">
+<span class="tag">News</span>
+<h2 data-lang="en">Interesting news</h2>
+<h2 data-lang="fr">Actualités intéressantes</h2>
+<p data-lang="en">Follow research and biotechnology news from SupBiotech Research Labs.</p>
+<p data-lang="fr">Suivez les actualités de recherche et de biotechnologie des laboratoires SupBiotech.</p>
+</a>
+
+<a class="card" href="https://www.linkedin.com/showcase/jobs4biotech" target="_blank">
+<img class="card-img" src="assets/job.png">
+<span class="tag">Jobs</span>
+<h2 data-lang="en">Jobs</h2>
+<h2 data-lang="fr">Emplois</h2>
+<p data-lang="en">Find job and internship opportunities in biotechnology.</p>
+<p data-lang="fr">Trouvez des offres d’emploi et de stage en biotechnologie.</p>
+</a>
+
+<a class="card" href="https://view.genially.com/67c8208b7b089b7557c2a757" target="_blank">
+<img class="card-img" src="assets/jobcoach.png">
+<span class="tag">Career advice</span>
+<h2 data-lang="en">Advice to find internships and jobs in biotech</h2>
+<h2 data-lang="fr">Conseils pour trouver un stage ou un emploi en biotech</h2>
+<p data-lang="en">Practical advice to prepare applications and find opportunities.</p>
+<p data-lang="fr">Conseils pratiques pour préparer ses candidatures et trouver des opportunités.</p>
+</a>
+
+</section>
 
 </main>
 
+<footer>
+<span data-lang="en">SupBiotech Student Space · Research and Lab Tools</span>
+<span data-lang="fr">Espace étudiants SupBiotech · Recherche et outils de laboratoire</span>
+</footer>
+
 <script>
-  const langButtons = document.querySelectorAll("[data-set-lang]");
-
-  function setLanguage(lang) {
-    document.body.classList.toggle("fr", lang === "fr");
-    document.documentElement.lang = lang;
-
-    langButtons.forEach(button => {
-      button.classList.toggle("active", button.dataset.setLang === lang);
-    });
-  }
-
-  langButtons.forEach(button => {
-    button.addEventListener("click", () => {
-      setLanguage(button.dataset.setLang);
-    });
-  });
+const btns=document.querySelectorAll("[data-set-lang]");
+btns.forEach(b=>b.onclick=()=>{
+ document.body.classList.toggle("fr",b.dataset.setLang==="fr")
+})
 </script>
 
 </body>
