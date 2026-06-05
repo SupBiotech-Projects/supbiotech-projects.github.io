@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Student Space | Research and Lab Tools</title>
+  <title>Student Space | SupBiotech</title>
 
   <style>
     :root {
@@ -14,7 +14,7 @@
       --text: #102a2a;
       --muted: #5f7474;
       --alert: #263238;
-      --shadow: 0 18px 45px rgba(0, 0, 0, 0.10);
+      --shadow: 0 18px 45px rgba(0,0,0,.10);
       --radius: 24px;
     }
 
@@ -30,7 +30,30 @@
     header {
       background: linear-gradient(135deg, var(--teal), var(--dark-teal));
       color: white;
-      padding: 70px 8% 90px;
+      padding: 45px 8% 90px;
+    }
+
+    .topbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      margin-bottom: 45px;
+    }
+
+    .logo {
+      height: 70px;
+      background: white;
+      border-radius: 18px;
+      padding: 10px;
+    }
+
+    select {
+      padding: 10px 16px;
+      border-radius: 999px;
+      border: none;
+      font-weight: bold;
+      color: var(--dark-teal);
     }
 
     header h1 {
@@ -43,7 +66,7 @@
       margin-top: 18px;
       font-size: 1.25rem;
       max-width: 760px;
-      opacity: 0.95;
+      opacity: .95;
     }
 
     main {
@@ -58,15 +81,14 @@
       border-radius: 16px;
       box-shadow: var(--shadow);
       margin-bottom: 35px;
-      font-size: 0.95rem;
+      font-size: .95rem;
       font-weight: bold;
       display: inline-flex;
-      align-items: center;
       gap: 10px;
     }
 
     .access-bar span {
-      opacity: 0.85;
+      opacity: .85;
       font-weight: normal;
     }
 
@@ -91,32 +113,26 @@
       box-shadow: var(--shadow);
       text-decoration: none;
       color: inherit;
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      transition: transform .2s ease, box-shadow .2s ease;
       min-height: 235px;
       overflow: hidden;
     }
 
     .card:hover {
       transform: translateY(-6px);
-      box-shadow: 0 24px 60px rgba(0, 0, 0, 0.16);
+      box-shadow: 0 24px 60px rgba(0,0,0,.16);
     }
 
-    .placeholder-img {
+    .card-img {
       position: absolute;
       top: 22px;
       right: 22px;
       width: 58px;
       height: 58px;
       border-radius: 18px;
-      background: linear-gradient(135deg, #dff5f3, #b6e8e4);
-      border: 2px solid #ffffff;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--teal);
-      font-size: 1.4rem;
-      font-weight: bold;
+      object-fit: cover;
+      background: #dff5f3;
+      box-shadow: 0 8px 20px rgba(0,0,0,.12);
     }
 
     .tag {
@@ -125,7 +141,7 @@
       color: var(--dark-teal);
       padding: 7px 12px;
       border-radius: 999px;
-      font-size: 0.8rem;
+      font-size: .8rem;
       font-weight: bold;
       margin-bottom: 18px;
     }
@@ -149,135 +165,169 @@
       color: var(--muted);
       text-align: center;
     }
+
+    [data-lang="fr"] { display: none; }
+
+    body.fr [data-lang="en"] { display: none; }
+    body.fr [data-lang="fr"] { display: inline; }
+    body.fr section[data-lang="fr"],
+    body.fr div[data-lang="fr"],
+    body.fr h2[data-lang="fr"],
+    body.fr p[data-lang="fr"] { display: block; }
   </style>
 </head>
 
 <body>
 
-  <header>
-    <h1>Student Space</h1>
-    <p>Research and lab tools for SupBiotech students: publications, scientific tools, student projects, events, competitions, and English resources for science.</p>
-  </header>
+<header>
+  <div class="topbar">
+    <img class="logo" src="assets/supbiotech-logo.png" alt="SupBiotech logo">
+    <select id="languageSelector">
+      <option value="en">English</option>
+      <option value="fr">Français</option>
+    </select>
+  </div>
 
-  <main>
+  <h1 data-lang="en">Student Space</h1>
+  <h1 data-lang="fr">Espace étudiants</h1>
 
-    <div class="access-bar">
-      Reserved access <span>for SupBiotech students</span>
-    </div>
+  <p data-lang="en">Research and lab tools for SupBiotech students: publications, scientific tools, student projects, jobs, news and English resources for science.</p>
+  <p data-lang="fr">Outils de recherche et de laboratoire pour les étudiants de SupBiotech : publications, outils scientifiques, projets étudiants, emplois, actualités et ressources d’anglais scientifique.</p>
+</header>
 
-    <h2 class="section-title">Research and Lab Tools</h2>
+<main>
 
-    <section class="grid">
+  <div class="access-bar">
+    <span data-lang="en">Reserved access</span>
+    <span data-lang="fr">Accès réservé</span>
+    <span data-lang="en">for SupBiotech students</span>
+    <span data-lang="fr">aux étudiants de SupBiotech</span>
+  </div>
 
-      <a class="card" href="https://supbiotechfr.sharepoint.com/teams/RechercheSB/Documents%20partages/Forms/AllItems.aspx?id=%2Fteams%2FRechercheSB%2FDocuments%20partages%2FFor%20students%20-%20Public%2FUSEFUL%20SITES%20SB%2Epdf&parent=%2Fteams%2FRechercheSB%2FDocuments%20partages%2FFor%20students%20-%20Public" target="_blank">
-        <div class="placeholder-img">JPG</div>
-        <span class="tag">Publications</span>
-        <h2>Access to publications</h2>
-        <p>SupBiotech students have access to paid scientific journals, including Nature journals, plus useful scientific resources and directories.</p>
-      </a>
+  <h2 class="section-title" data-lang="en">Research and Lab Tools</h2>
+  <h2 class="section-title" data-lang="fr">Recherche et outils de laboratoire</h2>
 
-      <a class="card" href="https://frankyates6.wixsite.com/sbrecherche/espace-etudiants" target="_blank">
-        <div class="placeholder-img">JPG</div>
-        <span class="tag">Figures</span>
-        <h2>Making scientific illustrations</h2>
-        <p>A list of useful tools to create professional scientific illustrations, diagrams and graphical abstracts.</p>
-      </a>
+  <section class="grid">
 
-      <a class="card" href="https://f7c8eac9-47d6-4e8a-ac06-41332bd18d68.filesusr.com/ugd/fc74d9_517494ee25f1444ba64461c34add2d41.pdf" target="_blank">
-        <div class="placeholder-img">JPG</div>
-        <span class="tag">Science tools</span>
-        <h2>The tools you need to work in science</h2>
-        <p>Master essential tools to work as a scientist and engineer in research, biotechnology and laboratory environments.</p>
-      </a>
+    <a class="card" href="https://supbiotechfr.sharepoint.com/teams/RechercheSB/Documents%20partages/Forms/AllItems.aspx?id=%2Fteams%2FRechercheSB%2FDocuments%20partages%2FFor%20students%20-%20Public%2FUSEFUL%20SITES%20SB%2Epdf&parent=%2Fteams%2FRechercheSB%2FDocuments%20partages%2FFor%20students%20-%20Public" target="_blank">
+      <img class="card-img" src="assets/pub.png" alt="">
+      <span class="tag">Publications</span>
+      <h2 data-lang="en">Access to publications</h2>
+      <h2 data-lang="fr">Accès aux publications</h2>
+      <p data-lang="en">Access paid scientific journals and useful scientific resources.</p>
+      <p data-lang="fr">Accédez aux revues scientifiques payantes et à des ressources utiles.</p>
+    </a>
 
-    </section>
+    <a class="card" href="assets/scill.pdf" target="_blank">
+      <img class="card-img" src="assets/graph.png" alt="">
+      <span class="tag">Figures</span>
+      <h2 data-lang="en">Making scientific illustrations</h2>
+      <h2 data-lang="fr">Créer des illustrations scientifiques</h2>
+      <p data-lang="en">Tools to create scientific illustrations, diagrams and graphical abstracts.</p>
+      <p data-lang="fr">Outils pour créer des illustrations scientifiques, schémas et graphical abstracts.</p>
+    </a>
 
-    <h2 class="section-title">Student Journal and References</h2>
+    <a class="card" href="assets/work.pdf" target="_blank">
+      <img class="card-img" src="assets/toolbox.png" alt="">
+      <span class="tag">Science tools</span>
+      <h2 data-lang="en">The tools you need to work in science</h2>
+      <h2 data-lang="fr">Les outils nécessaires pour travailler en science</h2>
+      <p data-lang="en">Essential tools for research, biotechnology and laboratory work.</p>
+      <p data-lang="fr">Outils essentiels pour la recherche, les biotechnologies et le laboratoire.</p>
+    </a>
 
-    <section class="grid">
+    <a class="card" href="https://editor.p5js.org/frank.yates/full/OV6pjS93o" target="_blank">
+      <img class="card-img" src="assets/count.png" alt="">
+      <span class="tag">Practice</span>
+      <h2 data-lang="en">Practice counting cells on a Malassez chamber</h2>
+      <h2 data-lang="fr">S’entraîner à compter des cellules sur Malassez</h2>
+      <p data-lang="en">Interactive exercise to practice cell counting.</p>
+      <p data-lang="fr">Exercice interactif pour s’entraîner au comptage cellulaire.</p>
+    </a>
 
-      <a class="card" href="https://supbiotech-projects.github.io/" target="_blank">
-        <div class="placeholder-img">JPG</div>
-        <span class="tag">Student journal</span>
-        <h2>SupBiotech Projects</h2>
-        <p>The journal of SupBiotech students, highlighting student projects and scientific initiatives.</p>
-      </a>
+  </section>
 
-      <a class="card" href="https://www.youtube.com/watch?v=LVsI7kaIwFc" target="_blank">
-        <div class="placeholder-img">JPG</div>
-        <span class="tag">Bibliography</span>
-        <h2>Zotero tutorial</h2>
-        <p>Learn how to manage bibliographical references with Zotero.</p>
-      </a>
+  <h2 class="section-title" data-lang="en">Student Journal and References</h2>
+  <h2 class="section-title" data-lang="fr">Journal étudiant et références</h2>
 
-      <a class="card" href="https://frankyates6.wixsite.com/sbrecherche/mendeley" target="_blank">
-        <div class="placeholder-img">JPG</div>
-        <span class="tag">Bibliography</span>
-        <h2>Mendeley tutorial</h2>
-        <p>Learn how to organize, cite and manage references with Mendeley.</p>
-      </a>
+  <section class="grid">
 
-    </section>
+    <a class="card" href="https://supbiotech-projects.github.io/" target="_blank">
+      <img class="card-img" src="assets/sbpj.png" alt="">
+      <span class="tag">Student journal</span>
+      <h2>SupBiotech Projects</h2>
+      <p data-lang="en">The journal of SupBiotech students.</p>
+      <p data-lang="fr">Le journal des étudiants de SupBiotech.</p>
+    </a>
 
-    <h2 class="section-title">Opportunities and Events</h2>
+    <a class="card" href="https://www.youtube.com/watch?v=LVsI7kaIwFc" target="_blank">
+      <img class="card-img" src="assets/zoteros.png" alt="">
+      <span class="tag">Bibliography</span>
+      <h2 data-lang="en">Zotero tutorial</h2>
+      <h2 data-lang="fr">Tutoriel Zotero</h2>
+      <p data-lang="en">Learn how to manage bibliographical references with Zotero.</p>
+      <p data-lang="fr">Apprenez à gérer vos références bibliographiques avec Zotero.</p>
+    </a>
 
-    <section class="grid">
+    <a class="card" href="https://frankyates6.wixsite.com/sbrecherche/englishscience" target="_blank">
+      <img class="card-img" src="assets/english.png" alt="">
+      <span class="tag">English</span>
+      <h2 data-lang="en">Using English in science</h2>
+      <h2 data-lang="fr">Utiliser l’anglais en science</h2>
+      <p data-lang="en">Exercises, podcasts, videos and scientific English resources.</p>
+      <p data-lang="fr">Exercices, podcasts, vidéos et ressources d’anglais scientifique.</p>
+    </a>
 
-      <a class="card" href="https://frankyates6.wixsite.com/sbrecherche/student-competitions" target="_blank">
-        <div class="placeholder-img">JPG</div>
-        <span class="tag">Competitions</span>
-        <h2>Student competitions</h2>
-        <p>Take part in competitions, develop your own project and show your skills.</p>
-      </a>
+  </section>
 
-      <a class="card" href="https://frankyates6.wixsite.com/sbrecherche/calendrier" target="_blank">
-        <div class="placeholder-img">JPG</div>
-        <span class="tag">Events</span>
-        <h2>Scientific and biotech events</h2>
-        <p>Selected events recommended by SupBiotech professors for students interested in science and biotechnology.</p>
-      </a>
+  <h2 class="section-title" data-lang="en">News and Jobs</h2>
+  <h2 class="section-title" data-lang="fr">Actualités et emplois</h2>
 
-      <a class="card" href="https://frankyates6.wixsite.com/sbrecherche/calendrier" target="_blank">
-        <div class="placeholder-img">JPG</div>
-        <span class="tag">English</span>
-        <h2>Using English in science</h2>
-        <p>Selected exercises and useful resources such as podcasts, videos and scientific English materials.</p>
-      </a>
+  <section class="grid">
 
-    </section>
+    <a class="card" href="https://www.linkedin.com/company/research-labs-sup-biotech" target="_blank">
+      <img class="card-img" src="assets/club.png" alt="">
+      <span class="tag">News</span>
+      <h2 data-lang="en">Interesting news</h2>
+      <h2 data-lang="fr">Actualités intéressantes</h2>
+      <p data-lang="en">Follow research and biotechnology news from SupBiotech Research Labs.</p>
+      <p data-lang="fr">Suivez les actualités de recherche et de biotechnologie des laboratoires SupBiotech.</p>
+    </a>
 
-    <h2 class="section-title">News and Jobs</h2>
+    <a class="card" href="https://www.linkedin.com/showcase/jobs4biotech" target="_blank">
+      <img class="card-img" src="assets/job.png" alt="">
+      <span class="tag">Jobs</span>
+      <h2 data-lang="en">Jobs</h2>
+      <h2 data-lang="fr">Emplois</h2>
+      <p data-lang="en">Find job and internship opportunities in biotechnology.</p>
+      <p data-lang="fr">Trouvez des offres d’emploi et de stage en biotechnologie.</p>
+    </a>
 
-    <section class="grid">
+    <a class="card" href="https://view.genially.com/67c8208b7b089b7557c2a757" target="_blank">
+      <img class="card-img" src="assets/jobcoach.png" alt="">
+      <span class="tag">Career advice</span>
+      <h2 data-lang="en">Advice to find internships and jobs in biotech</h2>
+      <h2 data-lang="fr">Conseils pour trouver un stage ou un emploi en biotech</h2>
+      <p data-lang="en">Practical advice to prepare applications and find opportunities.</p>
+      <p data-lang="fr">Conseils pratiques pour préparer ses candidatures et trouver des opportunités.</p>
+    </a>
 
-      <a class="card" href="https://www.linkedin.com" target="_blank">
-        <div class="placeholder-img">JPG</div>
-        <span class="tag">R&D news</span>
-        <h2>Interesting news for students</h2>
-        <p>Follow research and development news relevant to biotechnology, innovation and scientific careers.</p>
-      </a>
+  </section>
 
-      <a class="card" href="https://www.linkedin.com" target="_blank">
-        <div class="placeholder-img">JPG</div>
-        <span class="tag">Jobs</span>
-        <h2>Jobs and opportunities</h2>
-        <p>Find internship, job and career opportunities in biotechnology, research and related sectors.</p>
-      </a>
+</main>
 
-      <a class="card" href="mailto:">
-        <div class="placeholder-img">JPG</div>
-        <span class="tag">Newsletter</span>
-        <h2>Internal R&D newsletter</h2>
-        <p>Sign up for the internal R&D newsletter for SupBiotech students.</p>
-      </a>
+<footer>
+  SupBiotech Student Space · Research and Lab Tools
+</footer>
 
-    </section>
+<script>
+  const selector = document.getElementById("languageSelector");
 
-  </main>
-
-  <footer>
-    SupBiotech Student Space · Research and Lab Tools
-  </footer>
+  selector.addEventListener("change", function () {
+    document.body.classList.toggle("fr", this.value === "fr");
+    document.documentElement.lang = this.value;
+  });
+</script>
 
 </body>
 </html>
